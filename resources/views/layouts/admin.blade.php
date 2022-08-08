@@ -292,7 +292,12 @@
                                 <a class="dropdown-item" href="apps-contacts-profile.html"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profile</a>
                                 <a class="dropdown-item" href="auth-lock-screen.html"><i class="mdi mdi-lock font-size-16 align-middle me-1"></i> Lock Screen</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="auth-logout.html"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
+                                <form action="{{route('logout')}}" method="POST" id="logout-form">
+                                    @csrf
+                                <a href="{{route('login')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="mdi mdi-logout font-size-16 align-middle me-1 text-danger"></i> Logout</a>
+                            </form>
+
                             </div>
                         </div>
 
@@ -312,7 +317,7 @@
                             <li class="menu-title" data-key="t-menu">Menu</li>
 
                             <li>
-                                <a href="index.html">
+                                <a href="{{ route('admin.dashboard.index')}}">
                                     <i data-feather="home"></i>
                                     <span data-key="t-dashboard">Dashboard</span>
                                 </a>
@@ -368,6 +373,15 @@
                                 </ul>
                             </li>
 
+                            <form action="{{ route('logout')}}" method="POST" id="logout-form">
+                            @csrf
+                                <li>
+                                    <a href="{{ route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="mdi mdi-logout font-size-16 align-middle me-1 text-danger"></i>Logout</a>
+                                    </a>
+                                </li>
+
+                            </form>
 
 
 

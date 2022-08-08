@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Website\WebsiteController;
 use App\Http\Controllers\Admin\AdminController;
 use GuzzleHttp\Middleware;
 
@@ -14,6 +15,10 @@ use GuzzleHttp\Middleware;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::group(['prefix' => 'website', 'middleware' => 'auth'], function(){
+    Route::get('/', [WebsiteController::class, 'index'])->name('website.home');
+});
 
 
 Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
