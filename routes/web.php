@@ -16,7 +16,8 @@ use GuzzleHttp\Middleware;
 |
 */
 
-Route::get('/', [WebsiteController::class, 'home'])->name('website.home');
+Route::get('/', [WebsiteController::class, 'about'])->name('website.about');
+Route::get('/skill', [WebsiteController::class, 'skill'])->name('website.skill');
 
 
 Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
