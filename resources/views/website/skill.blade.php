@@ -1,60 +1,5 @@
 @extends('layouts.website')
-
 @section('content')
-
-<!-- General Information -->
-<div class="general_info d-flex flex-xl-column flex-md-row flex-column">
-    <div>
-        <div class="general_info_image">
-            <div class="background_image" style="background-image:url(images/smith.jpg)"></div>
-            <div class="header_button_2">
-                <a href="#">Available for freelance work</a>
-                <div class="d-flex flex-column align-items-center justify-content-center"><img src="images/download.png" alt=""></div>
-            </div>
-        </div>
-    </div>
-    <div class="general_info_content">
-        <div class="general_info_content_inner mCustomScrollbar" data-mcs-theme="minimal-dark">
-            <div class="general_info_title">General Information</div>
-            <ul class="general_info_list">
-                <li class="d-flex flex-row align-items-center justify-content-start">
-                    <div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="images/icon_1.png" alt=""></div>
-                    <div class="general_info_text">Name: <span>Jeremy Smith</span></div>
-                </li>
-                <li class="d-flex flex-row align-items-center justify-content-start">
-                    <div class="general_info_icon d-flex flex-column align-items-start justify-content-center"></div>
-                    <div class="general_info_text">Location: <span>London UK</span></div>
-                </li>
-                <li class="d-flex flex-row align-items-center justify-content-start">
-                    <div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="images/icon_2.png" alt=""></div>
-                    <div class="general_info_text">Date of Birth: <span>August 25, 1991</span></div>
-                </li>
-                <li class="d-flex flex-row align-items-center justify-content-start">
-                    <div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="images/icon_3.png" alt=""></div>
-                    <div class="general_info_text"><a href="mailto:contact@linque.com?subject=Job_Inquiry">contactme@templatename.com</a></div>
-                </li>
-                <li class="d-flex flex-row align-items-center justify-content-start">
-                    <div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="images/icon_4.png" alt=""></div>
-                    <div class="general_info_text">+76 6524 567862 763</div>
-                </li>
-                <li class="d-flex flex-row align-items-center justify-content-start">
-                    <div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="images/icon_5.png" alt=""></div>
-                    <div class="general_info_text"><a href="mailto:contact@linque.com">www.mytemplatename.com</a></div>
-                </li>
-            </ul>
-
-            <!-- Social -->
-            <div class="social_container">
-                <ul class="d-flex flex-row align-items-start justify-content-start">
-                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Main Content -->
 
@@ -71,10 +16,15 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien porttitor, dignissim quam sit amet, aliquam lorem. Fusce id ligula non risus mollis consectetur. Nam lobortis, erat quis pulvinar dignissim, velit ligula ullamcorper ipsum, at sodales elit odio at velit.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien porttitor,
+                                dignissim quam sit amet, aliquam lorem. Fusce id ligula non risus mollis consectetur.
+                                Nam lobortis, erat quis pulvinar dignissim, velit ligula ullamcorper ipsum, at sodales elit odio at velit.</p>
                         </div>
                         <div class="col-xl-6">
-                            <p>Phasellus vitae sapien porttitor, dignissim quam sit amet, aliquam lorem. Fusce id ligula non risus mollis consectetur. Nam lobortis, erat quis pulvinar dignissim, velit ligula ullamcorper ipsum, at sodales elit odio at velit. Sed a est a quam mattis suscipit. Proin et faucibus diam.</p>
+                            <p>Phasellus vitae sapien porttitor, dignissim quam sit amet, aliquam lorem.
+                                Fusce id ligula non risus mollis consectetur. Nam lobortis,
+                                erat quis pulvinar dignissim, velit ligula ullamcorper ipsum, at sodales elit odio at velit.
+                                Sed a est a quam mattis suscipit. Proin et faucibus diam.</p>
                         </div>
                     </div>
                 </div>
@@ -143,28 +93,28 @@
 
                 <!-- Milestone -->
                 <div class="milestone text-center">
-                    <div class="milestone_icon"><img src="images/icon_6.png" alt=""></div>
+                    <div class="milestone_icon"><img src="{{asset('contents/website')}}/images/icon_6.png" alt=""></div>
                     <div class="milestone_counter" data-end-value="14">0</div>
                     <div class="milestone_text">Years of Experience</div>
                 </div>
 
                 <!-- Milestone -->
                 <div class="milestone text-center">
-                    <div class="milestone_icon"><img src="images/icon_7.png" alt=""></div>
+                    <div class="milestone_icon"><img src="{{asset('contents/website')}}/images/icon_7.png" alt=""></div>
                     <div class="milestone_counter" data-end-value="1000" data-sign-before="+">0</div>
                     <div class="milestone_text">Happy Clients</div>
                 </div>
 
                 <!-- Milestone -->
                 <div class="milestone text-center">
-                    <div class="milestone_icon"><img src="images/icon_8.png" alt=""></div>
+                    <div class="milestone_icon"><img src="{{asset('contents/website')}}/images/icon_8.png" alt=""></div>
                     <div class="milestone_counter" data-end-value="14" data-sign-after="k">0</div>
                     <div class="milestone_text">Followers on FB</div>
                 </div>
 
                 <!-- Milestone -->
                 <div class="milestone text-center">
-                    <div class="milestone_icon"><img src="images/icon_9.png" alt=""></div>
+                    <div class="milestone_icon"><img src="{{asset('contents/website')}}/images/icon_9.png" alt=""></div>
                     <div class="milestone_counter" data-end-value="732">0</div>
                     <div class="milestone_text">Finished Projects</div>
                 </div>
