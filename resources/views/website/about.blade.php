@@ -2,7 +2,7 @@
 @section('content')
 
 
-       <!-- Main Content -->
+    <!-- Main Content -->
 
 			<div class="main_content">
 				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">

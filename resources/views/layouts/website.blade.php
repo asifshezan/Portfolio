@@ -13,6 +13,8 @@
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/skills_responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/skills.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/testimonials.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/testimonials_responsive.css">
 </head>
 <body>
 
