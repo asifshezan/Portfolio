@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.website')
 @section('content')
 
 	<!-- Main Content -->
@@ -18,7 +18,7 @@
                     <!-- Service -->
                     <div class="service">
                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                            <div><div class="service_icon"><img src="images/icon_10.png" alt=""></div></div>
+                            <div><div class="service_icon"><img src="{{asset('contents/website')}}/images/icon_10.png" alt=""></div></div>
                             <div class="service_title">Fast coding service</div>
                         </div>
                         <div class="service_text">
@@ -29,7 +29,7 @@
                     <!-- Service -->
                     <div class="service">
                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                            <div><div class="service_icon"><img src="images/icon_11.png" alt=""></div></div>
+                            <div><div class="service_icon"><img src="{{asset('contents/website')}}/images/icon_11.png" alt=""></div></div>
                             <div class="service_title">Documentations</div>
                         </div>
                         <div class="service_text">
@@ -40,7 +40,7 @@
                     <!-- Service -->
                     <div class="service">
                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                            <div><div class="service_icon"><img src="images/icon_12.png" alt=""></div></div>
+                            <div><div class="service_icon"><img src="{{asset('contents/website')}}/images/icon_12.png" alt=""></div></div>
                             <div class="service_title">Online presentations</div>
                         </div>
                         <div class="service_text">
@@ -51,7 +51,7 @@
                     <!-- Service -->
                     <div class="service">
                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                            <div><div class="service_icon"><img src="images/icon_13.png" alt=""></div></div>
+                            <div><div class="service_icon"><img src="{{asset('contents/website')}}/images/icon_13.png" alt=""></div></div>
                             <div class="service_title">Online shops</div>
                         </div>
                         <div class="service_text">
@@ -62,7 +62,7 @@
                     <!-- Service -->
                     <div class="service">
                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                            <div><div class="service_icon"><img src="images/icon_14.png" alt=""></div></div>
+                            <div><div class="service_icon"><img src="{{asset('contents/website')}}/images/icon_14.png" alt=""></div></div>
                             <div class="service_title">Video footages</div>
                         </div>
                         <div class="service_text">
@@ -73,7 +73,7 @@
                     <!-- Service -->
                     <div class="service">
                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
-                            <div><div class="service_icon"><img src="images/icon_15.png" alt=""></div></div>
+                            <div><div class="service_icon"><img src="{{asset('contents/website')}}/images/icon_15.png" alt=""></div></div>
                             <div class="service_title">Stock photos</div>
                         </div>
                         <div class="service_text">

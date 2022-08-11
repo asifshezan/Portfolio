@@ -15,6 +15,8 @@
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/skills.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/testimonials.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/testimonials_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/service.css">
 </head>
 <body>
 
