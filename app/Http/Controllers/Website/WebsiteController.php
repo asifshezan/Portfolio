@@ -14,4 +14,8 @@ class WebsiteController extends Controller
     public function skill(){
         return view('website.skill');
     }
+
+    public function service(){
+        return view('website.service');
+    }
 }

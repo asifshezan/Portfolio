@@ -17,7 +17,7 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -57,7 +57,7 @@ $(document).ready(function()
 	initProgressBars();
 	initMilestones();
 
-	/* 
+	/*
 
 	2. Set Header
 
@@ -75,7 +75,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	3. Init Menu
 
@@ -113,7 +113,7 @@ $(document).ready(function()
 		menuActive = false;
 	}
 
-	/* 
+	/*
 
 	4. Init Progress Bars
 
@@ -121,9 +121,9 @@ $(document).ready(function()
 
 	function initProgressBars()
 	{
-		if($('.skill_bars').length)
+		if($('.skill_barss').length)
 		{
-			var eles = $('.skill_bars');
+			var eles = $('.skill_barss');
 			var gradNum = 0;
 
 			eles.each(function(i)
@@ -136,7 +136,7 @@ $(document).ready(function()
 	    		var eleColorEnd = ele.data('color-end');
 	    		var eleGradient = 'url(#gradient' + gradNum.toString() +')';
 	    		let linearGradient = '<defs><linearGradient id="gradient' + gradNum + '" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="20%" stop-color="'+ eleColorStart +'"/><stop offset="50%" stop-color="'+ eleColorEnd+'"/></linearGradient></defs>';
-	    		
+
 	    		var statsScene = new ScrollMagic.Scene({
 		    		triggerElement: this,
 		    		triggerHook: 'onEnter',
@@ -144,7 +144,7 @@ $(document).ready(function()
 		    	})
 		    	.on('start', function()
 		    	{
-		    		var pbar = new ProgressBar.Line(eleName, 
+		    		var pbar = new ProgressBar.Line(eleName,
 		    		{
 		    			strokeWidth: 1,
 						easing: 'easeInOut',
@@ -174,10 +174,10 @@ $(document).ready(function()
 		    	.addTo(ctrl);
 		    	gradNum++;
 			});
-		}	
+		}
 	}
 
-	/* 
+	/*
 
 	5. Initialize Milestones
 
@@ -221,8 +221,8 @@ $(document).ready(function()
 		    		var counterTween = TweenMax.to(counter, 4,
 		    		{
 		    			value: endValue,
-		    			roundProps:"value", 
-						ease: Circ.easeOut, 
+		    			roundProps:"value",
+						ease: Circ.easeOut,
 						onUpdate:function()
 						{
 							document.getElementsByClassName('milestone_counter')[i].innerHTML = signBefore + counter.value + signAfter;
@@ -235,3 +235,4 @@ $(document).ready(function()
 	}
 
 });
+

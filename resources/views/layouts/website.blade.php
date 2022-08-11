@@ -29,7 +29,7 @@
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="active"><a href="{{ route('website.about')}}">About</a></li>
 					<li><a href="{{ route('website.skill')}}">Skills</a></li>
-					<li><a href="services.html">Services</a></li>
+					<li><a href="{{ route('website.service')}}">Services</a></li>
 					<li><a href="experience.html">Experience</a></li>
 					<li><a href="education.html">Education</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
@@ -126,6 +126,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{{asset('contents/website')}}/plugins/easing/easing.js"></script>
 <script src="{{asset('contents/website')}}/plugins/parallax-js-master/parallax.min.js"></script>
 <script src="{{asset('contents/website')}}/js/custom.js"></script>
-<script src="{{asset('contents/website')}}/js/skill.js"></script>
+<script src="{{asset('contents/website')}}/js/skills.js"></script>
+<script src="{{asset('contents/website')}}/js/experience.js"></script>
+<script src="{{asset('contents/website')}}/js/services.js"></script>
 </body>
 </html>

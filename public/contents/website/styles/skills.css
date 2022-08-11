@@ -726,6 +726,14 @@ section
 	top: 100px !important;
 }
 
+.skill_3_pbar
+{
+	font-size: 13px;
+	color: #100f3a;
+	font-weight: 500;
+	top: -20px !important;
+}
+
 /*********************************
 5.2 Milestones
 *********************************/
