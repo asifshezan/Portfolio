@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>About</title>
+<title>Asif Portfolio</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="vCard template project">
@@ -13,14 +13,16 @@
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/skills_responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/skills.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/testimonials.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/testimonials_responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services_responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/experience.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/experiences_responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/education_responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/education.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/portfolio_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/portfolio.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/contact.css">
 </head>
 <body>
 
@@ -30,7 +32,7 @@
 
 	<header class="header">
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
-			<div class="logo">Smith<span>.</span>CV</div>
+			<div class="logo">Asif<span>.</span>CV</div>
 			<div class="main_nav d-flex flex-row align-items-end justify-content-start">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="active"><a href="{{ route('website.about')}}">About</a></li>
@@ -38,9 +40,8 @@
 					<li><a href="{{ route('website.service')}}">Services</a></li>
 					<li><a href="{{ route('website.experience')}}">Experience</a></li>
 					<li><a href="{{ route('website.education')}}">Education</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="testimonials.html">Testimonials</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="{{ route('website.portfolio')}}">Portfolio</a></li>
+					<li><a href="{{ route('website.contact')}}">Contact</a></li>
 				</ul>
 				<div class="header_button ml-auto">
 					<a href="#">Available for freelance work</a>
@@ -134,10 +135,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{{asset('contents/website')}}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
 <script src="{{asset('contents/website')}}/plugins/easing/easing.js"></script>
 <script src="{{asset('contents/website')}}/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="{{asset('contents/website')}}/plugins/Isotope/fitcolumns.js"></script>
+<script src="{{asset('contents/website')}}/plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="{{asset('contents/website')}}/js/custom.js"></script>
 <script src="{{asset('contents/website')}}/js/skills.js"></script>
 <script src="{{asset('contents/website')}}/js/experience.js"></script>
 <script src="{{asset('contents/website')}}/js/services.js"></script>
 <script src="{{asset('contents/website')}}/js/education.js"></script>
+<script src="{{asset('contents/website')}}/js/portfolio.js"></script>
+<script src="{{asset('contents/website')}}/js/contact.js"></script>
 </body>
 </html>

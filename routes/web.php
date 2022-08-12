@@ -21,6 +21,8 @@ Route::get('/skill', [WebsiteController::class, 'skill'])->name('website.skill')
 Route::get('/service', [WebsiteController::class, 'service'])->name('website.service');
 Route::get('/experience', [WebsiteController::class, 'experience'])->name('website.experience');
 Route::get('/education', [WebsiteController::class, 'education'])->name('website.education');
+Route::get('/portfolio', [WebsiteController::class, 'portfolio'])->name('website.portfolio');
+Route::get('/contact', [WebsiteController::class, 'contact'])->name('website.contact');
 
 
 Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){

@@ -26,4 +26,12 @@ class WebsiteController extends Controller
     public function education(){
         return view('website.education');
     }
+
+    public function portfolio(){
+        return view('website.portfolio');
+    }
+
+    public function contact(){
+        return view('website.contact');
+    }
 }
