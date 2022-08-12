@@ -60,7 +60,7 @@
 			<div class="general_info d-flex flex-xl-column flex-md-row flex-column">
 				<div>
 					<div class="general_info_image">
-						<div class="background_image" style="background-image:url({{asset('contents/website')}}/images/smith.jpg)"></div>
+						<div class="background_image" style="background-image:url({{asset('contents/website')}}/images/asif.JPG); margin-bottom:30px;"></div>
 					</div>
 				</div>
 				<div class="general_info_content">
@@ -69,30 +69,30 @@
 						<ul class="general_info_list">
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_1.png" alt=""></div>
-								<div class="general_info_text">Name: <span>Jeremy Smith</span></div>
+								<div class="general_info_text">Name: <span>Asif Ahamed</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center">
                                     <i class="fa fa-map-marker"></i>
                                 </div>
 
-								<div class="general_info_text">Location: <span>London UK</span></div>
+								<div class="general_info_text">Location: <span>Purbachal Road, Uttar Badda.</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_2.png" alt=""></div>
-								<div class="general_info_text">Date of Birth: <span>August 25, 1991</span></div>
+								<div class="general_info_text">Date of Birth: <span>July 27, 1997</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_3.png" alt=""></div>
-								<div class="general_info_text"><a href="mailto:contact@linque.com?subject=Job_Inquiry">contactme@templatename.com</a></div>
+								<div class="general_info_text"><a href="mailto:asifshezan7@gmail.com?subject=Job_Inquiry">asifshezan7@gmail.com</a></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_4.png" alt=""></div>
-								<div class="general_info_text">+76 6524 567862 763</div>
+								<div class="general_info_text">+88 0151-6788837</div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_5.png" alt=""></div>
-								<div class="general_info_text"><a href="mailto:contact@linque.com">www.mytemplatename.com</a></div>
+								<div class="general_info_text"><a href="https://asifwebdev.com">https://asifwebdev.com</a></div>
 							</li>
 						</ul>
 

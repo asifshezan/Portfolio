@@ -39,7 +39,7 @@
                         <div class="col-xl-4 col-lg-6 pb_col">
                             <div class="pb_item">
                                 <div class="p_bar_title">Developement</div>
-                                <div id="skill_1_pbar" class="skill_barss" data-perc="0.70" data-name="skill_1_pbar" data-color-start="#79ccff" data-color-end="#9b74ff"></div>
+                                <div id="skill_1_pbar" class="skill_barss progressbar_text" data-perc="0.70" data-name="skill_1_pbar" data-color-start="#79ccff" data-color-end="#9b74ff"></div>
                             </div>
                         </div>
 
