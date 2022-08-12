@@ -16,7 +16,9 @@
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/testimonials.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/testimonials_responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services_responsive.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/service.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/experience.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/experiences_responsive.css">
 </head>
 <body>
 
@@ -32,7 +34,7 @@
 					<li class="active"><a href="{{ route('website.about')}}">About</a></li>
 					<li><a href="{{ route('website.skill')}}">Skills</a></li>
 					<li><a href="{{ route('website.service')}}">Services</a></li>
-					<li><a href="experience.html">Experience</a></li>
+					<li><a href="{{ route('website.experience')}}">Experience</a></li>
 					<li><a href="education.html">Education</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
 					<li><a href="testimonials.html">Testimonials</a></li>

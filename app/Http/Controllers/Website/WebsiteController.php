@@ -18,4 +18,8 @@ class WebsiteController extends Controller
     public function service(){
         return view('website.service');
     }
+
+    public function experience(){
+        return view('website.experience');
+    }
 }
