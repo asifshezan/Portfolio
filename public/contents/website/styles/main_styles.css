@@ -458,6 +458,13 @@ section
 	height: 21px;
 	margin-right: 24px;
 }
+.general_info_icon i
+{
+	width: 25px;
+	height: 25px;
+	margin-right: 29px;
+    color: #8583e1;
+}
 .general_info_icon img
 {
 	max-width: 100%;

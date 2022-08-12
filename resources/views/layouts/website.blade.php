@@ -19,6 +19,8 @@
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/experience.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/experiences_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/education_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/education.css">
 </head>
 <body>
 
@@ -35,7 +37,7 @@
 					<li><a href="{{ route('website.skill')}}">Skills</a></li>
 					<li><a href="{{ route('website.service')}}">Services</a></li>
 					<li><a href="{{ route('website.experience')}}">Experience</a></li>
-					<li><a href="education.html">Education</a></li>
+					<li><a href="{{ route('website.education')}}">Education</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
 					<li><a href="testimonials.html">Testimonials</a></li>
 					<li><a href="contact.html">Contact</a></li>
@@ -69,7 +71,10 @@
 								<div class="general_info_text">Name: <span>Jeremy Smith</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
-								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"></div>
+								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+
 								<div class="general_info_text">Location: <span>London UK</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
@@ -133,5 +138,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{{asset('contents/website')}}/js/skills.js"></script>
 <script src="{{asset('contents/website')}}/js/experience.js"></script>
 <script src="{{asset('contents/website')}}/js/services.js"></script>
+<script src="{{asset('contents/website')}}/js/education.js"></script>
 </body>
 </html>

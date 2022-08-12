@@ -22,4 +22,8 @@ class WebsiteController extends Controller
     public function experience(){
         return view('website.experience');
     }
+
+    public function education(){
+        return view('website.education');
+    }
 }
