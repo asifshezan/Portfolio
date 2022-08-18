@@ -35,13 +35,13 @@
 			<div class="logo">Asif<span>.</span>CV</div>
 			<div class="main_nav d-flex flex-row align-items-end justify-content-start">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
-					<li class="active"><a href="{{ route('website.about')}}">About</a></li>
-					<li><a href="{{ route('website.skill')}}">Skills</a></li>
-					<li><a href="{{ route('website.service')}}">Services</a></li>
-					<li><a href="{{ route('website.experience')}}">Experience</a></li>
-					<li><a href="{{ route('website.education')}}">Education</a></li>
-					<li><a href="{{ route('website.portfolio')}}">Portfolio</a></li>
-					<li><a href="{{ route('website.contact')}}">Contact</a></li>
+					<li class="{{ request()->routeIs('website.about') ? 'active' : '' }}"><a href="{{ route('website.about')}}">About</a></li>
+					<li class="{{ request()->routeIs('website.skill') ? 'active' : '' }}"><a href="{{ route('website.skill')}}">Skills</a></li>
+					<li class="{{ request()->routeIs('website.service') ? 'active' : '' }}"><a href="{{ route('website.service')}}">Services</a></li>
+					<li class="{{ request()->routeIs('website.experience') ? 'active' : '' }}"><a href="{{ route('website.experience')}}">Experience</a></li>
+					<li class="{{ request()->routeIs('website.education') ? 'active' : '' }}"><a href="{{ route('website.education')}}">Education</a></li>
+					<li class="{{ request()->routeIs('website.portfolio') ? 'active' : '' }}"><a href="{{ route('website.portfolio')}}">Portfolio</a></li>
+					<li class="{{ request()->routeIs('website.contact') ? 'active' : '' }}"><a href="{{ route('website.contact')}}">Contact</a></li>
 				</ul>
 				<div class="header_button ml-auto">
 					<a href="#">Available for freelance work</a>
