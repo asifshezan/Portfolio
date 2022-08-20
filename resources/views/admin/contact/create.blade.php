@@ -45,8 +45,8 @@
                             </div>
                             <div class="col-md-7 my-2">
                                 <label for="cont_details">Details</label>
-                                <textarea cols="135" rows="4" name="cont_details" value="{{ old('cont_details') }}"></textarea>
-                                {{-- <input class="form-control" type="text" name="cont_details" value="{{ old('cont_details') }}"> --}}
+                                {{-- <textarea cols="135" rows="4" name="cont_details" value="{{ old('cont_details') }}"></textarea> --}}
+                                <input class="form-control" type="text" name="cont_details" value="{{ old('cont_details') }}">
                                 @error('cont_details')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror

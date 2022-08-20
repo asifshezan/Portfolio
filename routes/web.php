@@ -44,11 +44,11 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::get('/', [ContactController::class, 'index'])->name('contact.index');
         Route::get('/create', [ContactController::class, 'create'])->name('contact.create');
         Route::post('/', [ContactController::class, 'store'])->name('contact.store');
-        Route::get('edit/{slug}', [ContactController::class, 'edit'])->name('contact.edit');
-        Route::get('view/{slug}', [ContactController::class, 'view'])->name('contact.view');
-        Route::put('update', [ContactController::class, 'update'])->name('contact.update');
-        Route::get('softdelete/{slug}', [ContactController::class, 'softdelete'])->name('contact.softdelete');
-        Route::get('delete/{slug}', [ContactController::class, 'destroy'])->name('contact.destroy');
+        Route::get('/edit/{slug}', [ContactController::class, 'edit'])->name('contact.edit');
+        Route::get('/view/{slug}', [ContactController::class, 'view'])->name('contact.view');
+        Route::post('/update/{id}',[ContactController::class, 'update'])->name('contact.update');
+        Route::get('/softdelete/{slug}', [ContactController::class, 'softdelete'])->name('contact.softdelete');
+        Route::get('/delete/{slug}', [ContactController::class, 'destroy'])->name('contact.destroy');
     });
 });
 
