@@ -148,35 +148,8 @@
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="{{asset('contents/admin')}}/images/brands/bitbucket.png" alt="bitbucket">
-                                                <span>Bitbucket</span>
-                                            </a>
-                                        </div>
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
-                                                <img src="{{asset('contents/admin')}}/images/brands/dribbble.png" alt="dribbble">
-                                                <span>Dribbble</span>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
-                                                <img src="{{asset('contents/admin')}}/images/brands/dropbox.png" alt="dropbox">
-                                                <span>Dropbox</span>
-                                            </a>
-                                        </div>
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
                                                 <img src="{{asset('contents/admin')}}/images/brands/mail_chimp.png" alt="mail_chimp">
                                                 <span>Mail Chimp</span>
-                                            </a>
-                                        </div>
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
-                                                <img src="{{asset('contents/admin')}}/images/brands/slack.png" alt="slack">
-                                                <span>Slack</span>
                                             </a>
                                         </div>
                                     </div>
@@ -219,39 +192,6 @@
                                     </a>
                                     <a href="#!" class="text-reset notification-item">
                                         <div class="d-flex">
-                                            <div class="flex-shrink-0 avatar-sm me-3">
-                                                <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                                    <i class="bx bx-cart"></i>
-                                                </span>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <h6 class="mb-1">Your order is placed</h6>
-                                                <div class="font-size-13 text-muted">
-                                                    <p class="mb-1">If several languages coalesce the grammar</p>
-                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#!" class="text-reset notification-item">
-                                        <div class="d-flex">
-                                            <div class="flex-shrink-0 avatar-sm me-3">
-                                                <span class="avatar-title bg-success rounded-circle font-size-16">
-                                                    <i class="bx bx-badge-check"></i>
-                                                </span>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <h6 class="mb-1">Your item is shipped</h6>
-                                                <div class="font-size-13 text-muted">
-                                                    <p class="mb-1">If several languages coalesce the grammar</p>
-                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-
-                                    <a href="#!" class="text-reset notification-item">
-                                        <div class="d-flex">
                                             <div class="flex-shrink-0 me-3">
                                                 <img src="{{asset('contents/admin')}}/images/users/avatar-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
                                             </div>
@@ -284,7 +224,7 @@
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="{{asset('contents/admin')}}/images/users/avatar-1.jpg"
                                     alt="Header Avatar">
-                                <span class="d-none d-xl-inline-block ms-1 fw-medium">Shawn L.</span>
+                                <span class="d-none d-xl-inline-block ms-1 fw-medium">{{ auth()->user()->name }}</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
@@ -324,53 +264,53 @@
                             </li>
 
                             <li>
-                                <a href="javascript: void(0);" class="has-arrow">
-                                    <i data-feather="grid"></i>
-                                    <span data-key="t-apps">Apps</span>
+                                <a href="" class="">
+                                    <i class="bx bx-globe"></i>
+                                    <span data-key="t-about">About Page</span>
                                 </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li>
-                                        <a href="apps-calendar.html">
-                                            <span data-key="t-calendar">Calendar</span>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="apps-chat.html">
-                                            <span data-key="t-chat">Chat</span>
-                                        </a>
-                                    </li>
-
-
-                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <i class="bx bx-globe"></i>
+                                    <span data-key="t-skill">Skills Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <i class="bx bx-globe"></i>
+                                    <span data-key="t-services">Services Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <i class="bx bx-globe"></i>
+                                    <span data-key="t-expericence">Expericence Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <i class="bx bx-globe"></i>
+                                    <span data-key="t-education">Education Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <i class="bx bx-globe"></i>
+                                    <span data-key="t-portfolio">Portfolio Page</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="">
+                                    <i class="bx bx-globe"></i>
+                                    <span data-key="t-contact">Contact Page</span>
+                                </a>
                             </li>
 
                             <li>
-                                <a href="javascript: void(0);" class="has-arrow">
-                                    <i data-feather="users"></i>
-                                    <span data-key="t-authentication">Authentication</span>
+                                <a href="{{route('website.about')}}" target="_blank" class="">
+                                    <i class="bx bx-globe"></i>
+                                    <span data-key="t-website">Website</span>
                                 </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="auth-login.html" data-key="t-login">Login</a></li>
-                                    <li><a href="auth-register.html" data-key="t-register">Register</a></li>
-                                    <li><a href="auth-recoverpw.html" data-key="t-recover-password">Recover Password</a></li>
-                                    <li><a href="auth-lock-screen.html" data-key="t-lock-screen">Lock Screen</a></li>
-                                    <li><a href="auth-logout.html" data-key="t-logout">Log Out</a></li>
-                                    <li><a href="auth-confirm-mail.html" data-key="t-confirm-mail">Confirm Mail</a></li>
-                                    <li><a href="auth-email-verification.html" data-key="t-email-verification">Email Verification</a></li>
-                                    <li><a href="auth-two-step-verification.html" data-key="t-two-step-verification">Two Step Verification</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow">
-                                    <i data-feather="file-text"></i>
-                                    <span data-key="t-pages">Pages</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="pages-starter.html" data-key="t-starter-page">Starter Page</a></li>
-                                    <li><a href="pages-500.html" data-key="t-error-500">Error 500</a></li>
-                                </ul>
                             </li>
 
                             <form action="{{ route('logout')}}" method="POST" id="logout-form">
