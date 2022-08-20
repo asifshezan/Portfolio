@@ -300,7 +300,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="">
+                                <a href="{{ route('contact.index') }}" class="">
                                     <i class="bx bx-globe"></i>
                                     <span data-key="t-contact">Contact Page</span>
                                 </a>

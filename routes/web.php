@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Website\WebsiteController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ContactController;
 use GuzzleHttp\Middleware;
 
 /*
@@ -37,27 +38,22 @@ Route::get('/contact', [WebsiteController::class, 'contact'])->name('website.con
 
 Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
     Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard.index');
+
+
+    Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
+        Route::get('/', [ContactController::class, 'index'])->name('contact.index');
+        Route::get('/create', [ContactController::class, 'create'])->name('contact.create');
+        Route::post('/', [ContactController::class, 'store'])->name('contact.store');
+        Route::get('edit/{slug}', [ContactController::class, 'edit'])->name('contact.edit');
+        Route::get('view/{slug}', [ContactController::class, 'view'])->name('contact.view');
+        Route::put('update', [ContactController::class, 'update'])->name('contact.update');
+        Route::get('softdelete/{slug}', [ContactController::class, 'softdelete'])->name('contact.softdelete');
+        Route::get('delete/{slug}', [ContactController::class, 'destroy'])->name('contact.destroy');
+    });
 });
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

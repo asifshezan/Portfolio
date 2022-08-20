@@ -4,12 +4,12 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0 font-size-18">Partner</h4>
+            <h4 class="mb-sm-0 font-size-18">Contact</h4>
 
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="javascript: void(0);">Partner</a></li>
-                    <li class="breadcrumb-item active">Create Partner</li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Contact</a></li>
+                    <li class="breadcrumb-item active">Create Contact</li>
                 </ol>
             </div>
 
@@ -20,53 +20,48 @@
     <div class="col-md-12">
         <div class="card border border-primary">
             <div class="card-header bg-transparent border-primary d-flex justify-content-between">
-                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>Create Partner </h5>
-                <a href="" class="btn btn-sm btn-primary waves-effect waves-light">
-                    <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> All Partner
-                </a>
+                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>Create Contact </h5>
+                <a href="{{ route('contact.index') }}" class="btn btn-sm btn-primary waves-effect waves-light">
+                    <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> All Contact</a>
             </div>
             <div class="card-body">
                 <div class="card-body">
-                    <form action="" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('contact.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row form-group">
                             <div class="col-md-6 my-2">
-                                <label for="partner_title">Title</label>
-                                <input class="form-control" type="text" name="partner_title" value="{{ old('partner_title') }}">
-                                @error('partner_title')
+                                <label for="cont_title">Title</label>
+                                <input class="form-control" type="text" name="cont_title" value="{{ old('cont_title') }}">
+                                @error('cont_title')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="col-md-6 my-2">
-                                <label for="partner_url">Url</label>
-                                <input class="form-control" type="url" name="partner_url" value="{{ old('partner_url') }}">
-                                @error('partner_url')
+                                <label for="cont_subtitle">Sub-Title</label>
+                                <input class="form-control" type="text" name="cont_subtitle" value="{{ old('cont_subtitle') }}">
+                                @error('cont_subtitle')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="col-md-6 my-2">
-                                <label for="partner_order">Order Level</label>
-                                <input class="form-control" type="number" name="partner_order" value="{{ old('partner_order') }}">
-                                @error('partner_order')
+                            <div class="col-md-7 my-2">
+                                <label for="cont_details">Details</label>
+                                <textarea cols="135" rows="4" name="cont_details" value="{{ old('cont_details') }}"></textarea>
+                                {{-- <input class="form-control" type="text" name="cont_details" value="{{ old('cont_details') }}"> --}}
+                                @error('cont_details')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-
-                        <div class="col-md-6 my-2">
-                            <label for="partner_logo">Partner Logo</label>
-                            <input id="partner_image_input" class="form-control" type="file" name="partner_logo" value="{{ old('partner_logo') }}">
-                            @error('partner_logo')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-
-                        <div class="col-md-12 my-3 d-flex">
-                            <img id="partner_image_preview" style="width: 70px" class="m-auto" src="{{ asset('uploads/no-entry.png') }}" alt="Category Image">
-                        </div>
+                            <div class="col-md-5 my-2">
+                                <label for="cont_button">Button</label>
+                                <input class="form-control" type="text" name="cont_button" value="{{ old('cont_button') }}">
+                                @error('cont_button')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
 
                         <div class="col-md-2 mt-4">
                             <button type="submit" class="btn btn-primary waves-effect waves-light">
-                                <i class="bx bxs-save font-size-16 align-middle me-2"></i> Partner Save
+                                <i class="bx bxs-save font-size-16 align-middle me-2"></i> Contact Save
                             </button>
                         </div>
                     </div>
