@@ -305,7 +305,12 @@
                                     <span data-key="t-contact">Contact Page</span>
                                 </a>
                             </li>
-
+                            <li>
+                                <a href="{{ route('contact_mess.index') }}" class="">
+                                    <i class="bx bx-globe"></i>
+                                    <span data-key="t-contact">Contact Message</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="{{route('website.about')}}" target="_blank" class="">
                                     <i class="bx bx-globe"></i>

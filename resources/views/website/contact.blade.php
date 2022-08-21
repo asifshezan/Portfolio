@@ -21,11 +21,13 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien porttitor, dignissim quam sit ame. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien.</p>
                             </div>
                             <div class="contact_form_container">
-                                <form action="#" id="contact_form" class="contact_form clearfix">
-                                    <div><input type="text" class="contact_input" placeholder="Name" required="required"></div>
-                                    <div><input type="email" class="contact_input" placeholder="E-mail" required="required"></div>
-                                    <input type="text" class="contact_input" placeholder="Subject" required="required">
-                                    <textarea class="contact_input contact_textarea" placeholder="Message" required="required"></textarea>
+                                <form action="{{ url('contact-message') }}" method="POST" id="contact_form" class="contact_form clearfix">
+                                    @csrf
+                                    <div><input type="text" class="contact_input" placeholder="Name" name="cm_name" required="required"></div>
+                                    <div><input type="email" class="contact_input" placeholder="E-mail" name="cm_email" required="required"></div>
+                                    <div><input type="text" class="contact_input" placeholder="Subject" name="cm_subject" required="required"></div>
+                                    <div><input type="text" class="contact_input" name="cm_phone" placeholder="Phone" required="required"></div>
+                                    <textarea class="contact_input contact_textarea" placeholder="Message" name="cm_message" required="required"></textarea>
                                     <button class="contact_button">Send Message</button>
                                 </form>
                             </div>

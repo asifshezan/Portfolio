@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Website\WebsiteController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\ContactMessageController;
 use GuzzleHttp\Middleware;
 
 /*
@@ -24,6 +25,7 @@ Route::get('/experience', [WebsiteController::class, 'experience'])->name('websi
 Route::get('/education', [WebsiteController::class, 'education'])->name('website.education');
 Route::get('/portfolio', [WebsiteController::class, 'portfolio'])->name('website.portfolio');
 Route::get('/contact', [WebsiteController::class, 'contact'])->name('website.contact');
+Route::post('contact-message', [WebsiteController::class, 'contactmess']);
 
 
 // Route::get('login/facebook', [App\Http\Controllers\Auth\LoginController::class, 'redirectToFacebook'])->name('login.facebook');
@@ -49,6 +51,14 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::post('/update/{id}',[ContactController::class, 'update'])->name('contact.update');
         Route::get('/softdelete/{slug}', [ContactController::class, 'softdelete'])->name('contact.softdelete');
         Route::get('/delete/{slug}', [ContactController::class, 'destroy'])->name('contact.destroy');
+    });
+
+    Route::group(['prefix' => 'contact_mess', 'middleware' => 'auth'], function(){
+        Route::get('/', [ContactMessageController::class, 'index'])->name('contact_mess.index');
+        Route::post('/store', [ContactMessageController::class, 'store'])->name('contact_mess.store');
+        Route::get('/view/{slug}', [ContactMessageController::class, 'view'])->name('contact_mess.view');
+        Route::get('/softdelete/{slug}', [ContactMessageController::class, 'softdelete'])->name('contact_mess.softdelete');
+        Route::get('/delete/{slug}', [ContactMessageController::class, 'destroy'])->name('contact_mess.destroy');
     });
 });
 

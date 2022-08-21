@@ -4,12 +4,12 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0 font-size-18">contact</h4>
+            <h4 class="mb-sm-0 font-size-18">Contact Message</h4>
 
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="javascript: void(0);">contact</a></li>
-                    <li class="breadcrumb-item active">All contact</li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Contact Message</a></li>
+                    <li class="breadcrumb-item active">All Contact Message</li>
                 </ol>
             </div>
 
@@ -20,30 +20,29 @@
     <div class="col-md-12">
         <div class="card border border-primary">
             <div class="card-header bg-transparent border-primary d-flex justify-content-between">
-                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>All Contact </h5>
-                <a href="{{ route('contact.create') }}" class="btn btn-sm btn-primary waves-effect waves-light">
-                    <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> Create Contact
-                </a>
+                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>All Contact Message</h5>
             </div>
             <div class="card-body">
                 <div class="card-body">
                     <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                         <thead>
                             <tr>
-                                <th>Title</th>
-                                <th>Sub-Title</th>
-                                <th>Details</th>
-                                <th>Button</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Phone</th>
+                                <th>Message</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($all as $data)
                             <tr>
-                                <td>{{ $data['cont_title'] }}</td>
-                                <td>{{ $data['cont_subtitle'] }}</td>
-                                <td>{{ $data['cont_details'] }}</td>
-                                <td>{{ $data['cont_button'] }}</td>
+                                <td>{{ $data['cm_name'] }}</td>
+                                <td>{{ $data['cm_email'] }}</td>
+                                <td>{{ $data['cm_subject'] }}</td>
+                                <td>{{ $data['cm_phone'] }}</td>
+                                <td>{{ $data['cm_message'] }}</td>
                                 <td class="text-center">
                                     <div class="btn-group" role="group">
                                         <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
@@ -52,26 +51,19 @@
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                             <li>
-                                                <a href="{{ route('contact.view',$data->cont_slug) }}" class="dropdown-item"><i
+                                                <a href="{{ route('contact_mess.view',$data->cm_slug) }}" class="dropdown-item"><i
                                                         class="bx bx-show-alt label-icon"></i> View</a>
                                             </li>
                                             <li>
-                                                <a href="{{ route('contact.edit',$data['cont_slug']) }}"
-                                                    class="dropdown-item"><i class=" bx bx-edit-alt label-icon"></i>
-                                                    Edit</a>
-                                            </li>
-                                            <li>
-                                                <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".bs-example-modal-sm{{ $data['cont_slug'] }}"><i class=" bx bxs-trash-alt label-icon"></i> Delete</a>
+                                                <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".bs-example-modal-sm{{ $data['cm_slug'] }}"><i class=" bx bxs-trash-alt label-icon"></i> Delete</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </td>
                             </tr>
 
-
-
                             {{-- Delete Modal --}}
-                            <div class="modal fade bs-example-modal-sm{{ $data['cont_slug'] }}" tabindex="-1" aria-labelledby="mySmallModalLabel" style="display: none;" aria-hidden="true">
+                            <div class="modal fade bs-example-modal-sm{{ $data['cm_slug'] }}" tabindex="-1" aria-labelledby="mySmallModalLabel" style="display: none;" aria-hidden="true">
                                 <div class="modal-dialog modal-sm modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -83,7 +75,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                            <a href="{{ route('contact.softdelete',$data['cont_slug']) }}" class="btn btn-primary">Delete</a>
+                                            <a href="{{ route('contact_mess.softdelete',$data['cm_slug']) }}" class="btn btn-primary">Delete</a>
                                         </div>
                                     </div><!-- /.modal-content -->
                                 </div><!-- /.modal-dialog -->
