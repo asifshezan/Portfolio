@@ -66,10 +66,10 @@ class ContactController extends Controller
         return view('admin.contact.edit', compact('data'));
     }
 
-    public function update(Request $request, $slug){
-        $id = $request['cont_id'];
+    public function update(Request $request){
+        $id = $request->cont_id;
         // dd($request->all());
-        $update = Contact::where('cont_slug',$slug)->update([
+        $update = Contact::where('cont_id',$id)->update([
             'cont_title' => $request['cont_title'],
             'cont_subtitle' => $request['cont_subtitle'],
             'cont_details' => $request['cont_details'],

@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Website\WebsiteController;
-use App\Http\Controllers\Website\AboutController;
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Website\ContactController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ContactMessageController;
 
 use GuzzleHttp\Middleware;
@@ -45,13 +45,25 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
     Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard.index');
 
 
+    Route::group(['prefix' => 'about', 'middleware' => 'auth'], function(){
+        Route::get('/', [AboutController::class, 'index'])->name('about.index');
+        Route::get('/create', [AboutController::class, 'create'])->name('about.create');
+        Route::post('/store', [AboutController::class, 'store'])->name('about.store');
+        Route::get('/edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
+        Route::get('/view/{id}', [AboutController::class, 'view'])->name('about.view');
+        Route::put('/update', [AboutController::class, 'update'])->name('about.update');
+        Route::get('/softdelete', [AboutController::class, 'softdelete'])->name('about.softdelete');
+        Route::get('/delete', [AboutController::class, 'destroy'])->name('about.destroy');
+    });
+
+
     Route::group(['prefix' => 'contact', 'middleware' => 'auth'], function(){
         Route::get('/', [ContactController::class, 'index'])->name('contact.index');
         Route::get('/create', [ContactController::class, 'create'])->name('contact.create');
         Route::post('/', [ContactController::class, 'store'])->name('contact.store');
         Route::get('/edit/{slug}', [ContactController::class, 'edit'])->name('contact.edit');
         Route::get('/view/{slug}', [ContactController::class, 'view'])->name('contact.view');
-        Route::post('/update/{id}',[ContactController::class, 'update'])->name('contact.update');
+        Route::post('/update',[ContactController::class, 'update'])->name('contact.update');
         Route::get('/softdelete/{slug}', [ContactController::class, 'softdelete'])->name('contact.softdelete');
         Route::get('/delete/{slug}', [ContactController::class, 'destroy'])->name('contact.destroy');
     });

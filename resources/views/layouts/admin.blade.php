@@ -264,7 +264,7 @@
                             </li>
 
                             <li>
-                                <a href="" class="">
+                                <a href="{{ route('about.index')}}" class="">
                                     <i class="bx bx-globe"></i>
                                     <span data-key="t-about">About Page</span>
                                 </a>
