@@ -17,4 +17,9 @@ class ContactMessageController extends Controller
         return view('admin.contact_mess.index', compact('all'));
     }
 
+    public function view($id){
+        $data = ContactMessage::where('cm_status',1)->where('cm_id',$id)->firstOrFail();
+        return view('admin.contact_mess.view', compact('data'));
+    }
+
 }

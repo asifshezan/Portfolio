@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Website\WebsiteController;
+use App\Http\Controllers\Website\AboutController;
+
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Website\ContactController;
 use App\Http\Controllers\Admin\ContactMessageController;
+
 use GuzzleHttp\Middleware;
 
 /*

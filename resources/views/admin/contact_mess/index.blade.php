@@ -51,7 +51,7 @@
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                             <li>
-                                                <a href="{{ route('contact_mess.view',$data->cm_slug) }}" class="dropdown-item"><i
+                                                <a href="{{ route('contact_mess.view',$data->cm_id) }}" class="dropdown-item"><i
                                                         class="bx bx-show-alt label-icon"></i> View</a>
                                             </li>
                                             <li>
