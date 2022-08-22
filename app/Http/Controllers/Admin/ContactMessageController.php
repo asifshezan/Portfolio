@@ -22,4 +22,18 @@ class ContactMessageController extends Controller
         return view('admin.contact_mess.view', compact('data'));
     }
 
+    public function softdelete($id){
+        $soft = ContactMessage::where('cm_status',1)->where('cm_id',$id)->update([
+            'cm_status' => 0
+        ]);
+
+        if($soft){
+            Session::flash('success','Successfully delete.');
+            return redirect()->back();
+        }else{
+            Session::flash('error', 'Opps! Failed to delete.');
+            return redirect()->back();
+        }
+    }
+
 }

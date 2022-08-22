@@ -55,7 +55,7 @@
                                                         class="bx bx-show-alt label-icon"></i> View</a>
                                             </li>
                                             <li>
-                                                <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".bs-example-modal-sm{{ $data['cm_slug'] }}"><i class=" bx bxs-trash-alt label-icon"></i> Delete</a>
+                                                <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".bs-example-modal-sm{{ $data['cm_id'] }}"><i class=" bx bxs-trash-alt label-icon"></i> Delete</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -63,7 +63,7 @@
                             </tr>
 
                             {{-- Delete Modal --}}
-                            <div class="modal fade bs-example-modal-sm{{ $data['cm_slug'] }}" tabindex="-1" aria-labelledby="mySmallModalLabel" style="display: none;" aria-hidden="true">
+                            <div class="modal fade bs-example-modal-sm{{ $data['cm_id'] }}" tabindex="-1" aria-labelledby="mySmallModalLabel" style="display: none;" aria-hidden="true">
                                 <div class="modal-dialog modal-sm modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -75,7 +75,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                            <a href="{{ route('contact_mess.softdelete',$data['cm_slug']) }}" class="btn btn-primary">Delete</a>
+                                            <a href="{{ route('contact_mess.softdelete',$data['cm_id']) }}" class="btn btn-primary">Delete</a>
                                         </div>
                                     </div><!-- /.modal-content -->
                                 </div><!-- /.modal-dialog -->
