@@ -52,7 +52,7 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::get('/edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
         Route::get('/view/{id}', [AboutController::class, 'view'])->name('about.view');
         Route::put('/update', [AboutController::class, 'update'])->name('about.update');
-        Route::get('/softdelete', [AboutController::class, 'softdelete'])->name('about.softdelete');
+        Route::get('/softdelete', [ContactController::class, 'softdelete'])->name('about.softdelete');
         Route::get('/delete', [AboutController::class, 'destroy'])->name('about.destroy');
     });
 
@@ -63,7 +63,7 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::post('/', [ContactController::class, 'store'])->name('contact.store');
         Route::get('/edit/{slug}', [ContactController::class, 'edit'])->name('contact.edit');
         Route::get('/view/{slug}', [ContactController::class, 'view'])->name('contact.view');
-        Route::post('/update',[ContactController::class, 'update'])->name('contact.update');
+        Route::put('/update',[ContactController::class, 'update'])->name('contact.update');
         Route::get('/softdelete/{slug}', [ContactController::class, 'softdelete'])->name('contact.softdelete');
         Route::get('/delete/{slug}', [ContactController::class, 'destroy'])->name('contact.destroy');
     });

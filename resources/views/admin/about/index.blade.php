@@ -9,7 +9,7 @@
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="javascript: void(0);">About</a></li>
-                    <li class="breadcrumb-item active">All About</li>
+                    <li class="breadcrumb-item active">All About Details</li>
                 </ol>
             </div>
 
@@ -53,11 +53,11 @@
                                                 <a href="{{ route('about.view',$data->ab_id) }}" class="dropdown-item"><i
                                                         class="bx bx-show-alt label-icon"></i> View</a>
                                             </li>
-                                            {{-- <li>
-                                                <a href="{{ route('about.edit',$data['cont_id']) }}"
+                                            <li>
+                                                <a href="{{ route('about.edit',$data['ab_id']) }}"
                                                     class="dropdown-item"><i class=" bx bx-edit-alt label-icon"></i>
                                                     Edit</a>
-                                            </li> --}}
+                                            </li>
                                             <li>
                                                 <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".bs-example-modal-sm{{ $data['ab_id'] }}"><i class=" bx bxs-trash-alt label-icon"></i> Delete</a>
                                             </li>
