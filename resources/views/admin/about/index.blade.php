@@ -20,7 +20,7 @@
     <div class="col-md-12">
         <div class="card border border-primary">
             <div class="card-header bg-transparent border-primary d-flex justify-content-between">
-                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>All About </h5>
+                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>All About</h5>
                 <a href="{{ route('about.create') }}" class="btn btn-sm btn-primary waves-effect waves-light">
                 <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> Create About Details
                 </a>
@@ -53,11 +53,11 @@
                                                 <a href="{{ route('about.view',$data->ab_id) }}" class="dropdown-item"><i
                                                         class="bx bx-show-alt label-icon"></i> View</a>
                                             </li>
-                                            <li>
+                                            {{-- <li>
                                                 <a href="{{ route('about.edit',$data['cont_id']) }}"
                                                     class="dropdown-item"><i class=" bx bx-edit-alt label-icon"></i>
                                                     Edit</a>
-                                            </li>
+                                            </li> --}}
                                             <li>
                                                 <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".bs-example-modal-sm{{ $data['ab_id'] }}"><i class=" bx bxs-trash-alt label-icon"></i> Delete</a>
                                             </li>
