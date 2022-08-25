@@ -63,4 +63,9 @@ class EducationController extends Controller
         $data = Education::where('edu_status',1)->where('edu_slug',$slug)->firstOrFail();
         return view('admin.education.view', compact('data'));
     }
+
+    public function edit($slug){
+        $data = Education::where('edu_status',1)->where('edu_slug',$slug)->firstOrFail();
+        return view('admin.education.edit', compact('data'));
+    }
 }
