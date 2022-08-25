@@ -3,8 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Website\WebsiteController;
 
-use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
+
+
+use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ContactMessageController;
 
@@ -66,6 +69,18 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::put('/update',[ContactController::class, 'update'])->name('contact.update');
         Route::get('/softdelete/{slug}', [ContactController::class, 'softdelete'])->name('contact.softdelete');
         Route::get('/delete/{slug}', [ContactController::class, 'destroy'])->name('contact.destroy');
+    });
+
+
+    Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
+        Route::get('/', [EducationController::class, 'index'])->name('education.index');
+        Route::get('/create', [EducationController::class, 'create'])->name('education.create');
+        Route::post('/', [EducationController::class, 'store'])->name('education.store');
+        Route::get('/edit/{slug}', [EducationController::class, 'edit'])->name('education.edit');
+        Route::get('/view/{slug}', [EducationController::class, 'view'])->name('education.view');
+        Route::put('/update',[EducationController::class, 'update'])->name('education.update');
+        Route::get('/softdelete/{slug}', [EducationController::class, 'softdelete'])->name('education.softdelete');
+        Route::get('/delete/{slug}', [EducationController::class, 'destroy'])->name('education.destroy');
     });
 
     Route::group(['prefix' => 'contact_mess', 'middleware' => 'auth'], function(){

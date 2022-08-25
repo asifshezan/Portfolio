@@ -288,7 +288,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="">
+                                <a href="{{ route('education.index')}}" class="">
                                     <i class="bx bx-globe"></i>
                                     <span data-key="t-education">Education Page</span>
                                 </a>
