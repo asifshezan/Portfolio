@@ -68,4 +68,48 @@ class EducationController extends Controller
         $data = Education::where('edu_status',1)->where('edu_slug',$slug)->firstOrFail();
         return view('admin.education.edit', compact('data'));
     }
+
+    public function update(Request $request){
+        $id = $request->edu_id;
+
+        $update = Education::where('edu_id',$id)->update([
+            'edu_page_title' => $request['edu_page_title'],
+            'edu_page_subtitle' => $request['edu_page_subtitle'],
+            'edu_year' => $request['edu_year'],
+            'edu_title' => $request['edu_title'],
+            'edu_subtitle' => $request['edu_subtitle'],
+            'edu_text' => $request['edu_text'],
+            'updated_at' => Carbon::now()->toDateTimeString()
+        ]);
+
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+            $imageName = $id. '.' . time() . '.' .rand(1999,2999). '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(250,250)->save('uploads/education/'.$imageName);
+
+            Education::where('edu_id',$id)->update([
+                'edu_image' => $imageName
+            ]);
+        }
+        if($update){
+            Session::flash('success','Successfully update.');
+            return redirect()->route('education.index');
+        }else{
+            Session::flash('error','Opps! Failed to update.');
+            return redirect()->back();
+        }
+    }
+
+    public function softdelete($slug){
+        $soft = Education::where('edu_status',1)->where('edu_slug',$slug)->update([
+            'edu_status' => 0
+        ]);
+        if($soft){
+            Session::flash('success','Successfully delete.');
+            return redirect()->back();
+        }else{
+            Session::flash('error','failed delete.');
+            return redirect()->back();
+        }
+    }
 }

@@ -33,7 +33,7 @@
                         <div class="row form-group">
                             <div class="col-md-6 my-2">
                                 <label for="edu_page_title">Page Title</label>
-                                <input type="hidden" name="education_id" value="{{ $data->edu_id }}">
+                                <input type="hidden" name="edu_id" value="{{ $data->edu_id }}">
                                 <input class="form-control" type="text" name="edu_page_title" value="{{ $data->edu_page_title }}">
                                 @error('edu_page_title')
                                     <span class="text-danger">{{ $message }}</span>
@@ -78,7 +78,7 @@
 
                         <div class="col-md-6 my-2">
                             <label for="education_image">education Image</label>
-                            <input id="education_image_input" class="form-control" type="file" name="education_image" value="{{ $data->education_image }}">
+                            <input id="education_image_input" class="form-control" type="file" name="image" value="{{ $data->education_image }}">
                             @error('education_image')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
