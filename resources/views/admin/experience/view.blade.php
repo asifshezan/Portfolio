@@ -28,7 +28,7 @@
                 <div class="p-4 border rounded">
                     <div class="table-responsive">
                         <table class="table mb-0 text-center">
-                            <thead aria-colspan="10">
+                            <thead>
                                 <tr>
                                     <th>Title</th>
                                     <th>Details</th>
@@ -57,7 +57,7 @@
                                 </tr>
                                 <tr>
                                     <th>Text :</th>
-                                    <td>{{ Str::limit( $data['edu_text'], 35)}}</td>
+                                    <td>{{ $data['edu_text'] }}</td>
                                 </tr>
                                 <tr>
                                     <th>Edu. Image :</th>
