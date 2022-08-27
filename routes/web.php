@@ -72,7 +72,19 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
     });
 
 
-    Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
+    Route::group(['prefix' => 'experience', 'middleware' => 'auth'], function(){
+        Route::get('/', [ExperienceController::class, 'index'])->name('experience.index');
+        Route::get('/create', [ExperienceController::class, 'create'])->name('experience.create');
+        Route::post('/', [ExperienceController::class, 'store'])->name('experience.store');
+        Route::get('/edit/{slug}', [ExperienceController::class, 'edit'])->name('experience.edit');
+        Route::get('/view/{slug}', [ExperienceController::class, 'view'])->name('experience.view');
+        Route::put('/update',[ExperienceController::class, 'update'])->name('experience.update');
+        Route::get('/softdelete/{slug}', [ExperienceController::class, 'softdelete'])->name('experience.softdelete');
+        Route::get('/delete/{slug}', [ExperienceController::class, 'destroy'])->name('experience.destroy');
+    });
+
+
+    Route::group(['prefix' => 'education', 'middleware' => 'auth'], function(){
         Route::get('/', [EducationController::class, 'index'])->name('education.index');
         Route::get('/create', [EducationController::class, 'create'])->name('education.create');
         Route::post('/', [EducationController::class, 'store'])->name('education.store');

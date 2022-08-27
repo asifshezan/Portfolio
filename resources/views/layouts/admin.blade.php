@@ -282,7 +282,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="">
+                                <a href="{{ route('experience.index')}}" class="">
                                     <i class="bx bx-globe"></i>
                                     <span data-key="t-expericence">Expericence Page</span>
                                 </a>

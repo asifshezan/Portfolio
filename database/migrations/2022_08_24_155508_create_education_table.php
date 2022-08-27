@@ -17,7 +17,7 @@ class CreateEducationTable extends Migration
             $table->id('edu_id');
             $table->string('edu_page_title')->nullable();
             $table->string('edu_page_subtitle')->nullable();
-            $table->integer('edu_year')->nullable();
+            $table->string('edu_year',20)->nullable();
             $table->string('edu_image',50)->nullable();
             $table->string('edu_title')->nullable();
             $table->string('edu_subtitle')->nullable();
