@@ -5,9 +5,13 @@ namespace App\Http\Controllers\Website;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Mail\Contact;
+use App\Mail\contact_message;
 use App\Models\ContactMessage;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
+
 
 class WebsiteController extends Controller
 {
@@ -62,6 +66,9 @@ class WebsiteController extends Controller
             'created_at' => Carbon::now()->toDateTimeString()
         ]);
 
+        Mail::to($request->cm_email)->send(new contact_message($request->cm_message));
+        Mail::to('asifshezan7@gamil.com')->send(new contact_message($request->cm_message));
+
         if($insert){
             Session::flash('success', 'Successfully insert');
             return redirect()->back();
@@ -69,5 +76,7 @@ class WebsiteController extends Controller
             Session::flash('error','opps! failed');
             return redirect()->back();
         }
+
+
     }
 }

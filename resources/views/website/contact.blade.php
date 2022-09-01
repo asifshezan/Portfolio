@@ -23,6 +23,14 @@
                             <div class="contact_form_container">
                                 <form action="{{ url('contact-message') }}" method="POST" id="contact_form" class="contact_form clearfix">
                                     @csrf
+                                    @if (Session::has('success'))
+                                    <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+                                        <strong>{{ Session::get('success') }}</strong>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    @endif
                                     <div><input type="text" class="contact_input" placeholder="Name" name="cm_name" required="required"></div>
                                     <div><input type="email" class="contact_input" placeholder="E-mail" name="cm_email" required="required"></div>
                                     <div><input type="text" class="contact_input" placeholder="Subject" name="cm_subject" required="required"></div>
