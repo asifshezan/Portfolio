@@ -278,7 +278,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="">
+                                <a href="{{ route('portfolio_category.index') }}" class="">
                                     <i class="bx bx-globe"></i>
                                     <span data-key="t-portfolio">Portfolio Category</span>
                                 </a>

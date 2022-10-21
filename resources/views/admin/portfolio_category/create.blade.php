@@ -4,12 +4,12 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0 font-size-18">education</h4>
+            <h4 class="mb-sm-0 font-size-18">Portfolio Category</h4>
 
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="javascript: void(0);">education</a></li>
-                    <li class="breadcrumb-item active">Create education</li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Portfolio Category</a></li>
+                    <li class="breadcrumb-item active">Create Portfolio Category</li>
                 </ol>
             </div>
 
@@ -20,68 +20,34 @@
     <div class="col-md-12">
         <div class="card border border-primary">
             <div class="card-header bg-transparent border-primary d-flex justify-content-between">
-                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>Create education </h5>
-                <a href="{{ route('education.index') }}" class="btn btn-sm btn-primary waves-effect waves-light">
-                    <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> All education</a>
+                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>Create Portfolio Category </h5>
+                <a href="{{ route('portfolio_category.index') }}" class="btn btn-sm btn-primary waves-effect waves-light">
+                    <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> All Portfolio Category</a>
             </div>
             <div class="card-body">
                 <div class="card-body">
-                    <form action="{{ route('education.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('portfolio_category.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row form-group">
                             <div class="col-md-6 my-2">
-                                <label for="edu_page_title">Education Page Title</label>
-                                <input class="form-control" type="text" name="edu_page_title" value="{{ old('edu_page_title') }}">
-                                @error('edu_page_title')
+                                <label for="port_cate_title">Portfolio Category Title</label>
+                                <input class="form-control" type="text" name="port_cate_title" value="{{ old('port_cate_title') }}">
+                                @error('port_cate_title')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
+
                             <div class="col-md-6 my-2">
-                                <label for="edu_page_subtitle">Education Page Sub-Title</label>
-                                <input class="form-control" type="text" name="edu_page_subtitle" value="{{ old('edu_page_subtitle') }}">
-                                @error('edu_page_subtitle')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
-                                <label for="edu_year">Education Year</label>
-                                <input class="form-control" type="text" name="edu_year" value="{{ old('edu_year') }}">
-                                @error('edu_year')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
-                                <label for="edu_image">Education Image</label>
-                                <input class="form-control" type="file" name="image" value="{{ old('edu_image') }}">
-                                @error('edu_image')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
-                                <label for="edu_title">Education Title</label>
-                                <input class="form-control" type="text" name="edu_title" value="{{ old('edu_title') }}">
-                                @error('edu_title')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
-                                <label for="edu_subtitle">Education Sub-Title</label>
-                                <input class="form-control" type="text" name="edu_subtitle" value="{{ old('edu_subtitle') }}">
-                                @error('edu_subtitle')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 ">
-                                <label for="edu_text">Education Text</label>
-                                <input class="form-control" type="text" name="edu_text" value="{{ old('edu_text') }}"><br>
-                                @error('edu_text')
+                                <label for="port_cate_image">Education Image</label>
+                                <input class="form-control" type="file" name="port_cate_image" value="{{ old('port_cate_image') }}">
+                                @error('port_cate_image')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
 
                             <div class="col-md-7 mt-4">
                             <button type="submit" class="btn btn-primary waves-effect waves-light">
-                                <i class="bx bxs-save font-size-16 align-middle me-2"></i> Education Save
+                                <i class="bx bxs-save font-size-16 align-middle me-2"></i> Portfolio Category Save
                             </button>
                         </div>
                     </div>
