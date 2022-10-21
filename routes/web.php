@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ExperienceController;
 use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ContactMessageController;
+use App\Http\Controllers\Admin\PortfolioCategoryController;
 
 use GuzzleHttp\Middleware;
 
@@ -102,6 +103,16 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::get('/view/{slug}', [ContactMessageController::class, 'view'])->name('contact_mess.view');
         Route::get('/softdelete/{slug}', [ContactMessageController::class, 'softdelete'])->name('contact_mess.softdelete');
         Route::get('/delete/{slug}', [ContactMessageController::class, 'destroy'])->name('contact_mess.destroy');
+    });
+
+    Route::group(['prefix' => 'portfolio_category', 'middleware' => 'auth'], function(){
+        Route::get('/', [PortfolioCategoryController::class, 'index'])->name('portfolio_category.index');
+        Route::get('create', [PortfolioCategoryController::class, 'create'])->name('portfolio_category.create');
+        Route::post('/', [PortfolioCategoryController::class, 'store'])->name('portfolio_category.store');
+        Route::get('/edit/{slug}', [PortfolioCategoryController::class, 'edit'])->name('portfolio_category.edit');
+        Route::get('/view/{slug}', [PortfolioCategoryController::class, 'view'])->name('portfolio_category.view');
+        Route::put('/update', [PortfolioCategoryController::class, 'update'])->name('portfolio_category.update');
+        Route::get('/softdelete/{slug}', [PortfolioCategoryController::class, 'softdelete'])->name('portfolio_category.softdelete');
     });
 });
 
