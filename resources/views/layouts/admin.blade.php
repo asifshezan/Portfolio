@@ -280,7 +280,7 @@
                             <li>
                                 <a href="" class="">
                                     <i class="bx bx-globe"></i>
-                                    <span data-key="t-portfolio">Portfolio Page</span>
+                                    <span data-key="t-portfolio">Portfolio Category</span>
                                 </a>
                             </li>
                             <li>
