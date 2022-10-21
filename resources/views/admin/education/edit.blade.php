@@ -77,7 +77,7 @@
                         </div>
 
                         <div class="col-md-6 my-2">
-                            <label for="education_image">education Image</label>
+                            <label for="education_image">Education Image</label>
                             <input id="education_image_input" class="form-control" type="file" name="image" value="{{ $data->education_image }}">
                             @error('education_image')
                                 <span class="text-danger">{{ $message }}</span>
