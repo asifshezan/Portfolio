@@ -254,9 +254,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="">
+                                <a href="{{ route('skill.index') }}" class="">
                                     <i class="bx bx-globe"></i>
-                                    <span data-key="t-skill">Skills Page</span>
+                                    <span data-key="t-skill">Skill Page</span>
                                 </a>
                             </li>
                             <li>

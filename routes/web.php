@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\EducationController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ContactMessageController;
 use App\Http\Controllers\Admin\PortfolioCategoryController;
+use App\Http\Controllers\Admin\SkillController;
 
 use GuzzleHttp\Middleware;
 
@@ -114,6 +115,17 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::put('/update', [PortfolioCategoryController::class, 'update'])->name('portfolio_category.update');
         Route::get('/softdelete/{slug}', [PortfolioCategoryController::class, 'softdelete'])->name('portfolio_category.softdelete');
     });
+
+    Route::group(['prefix' => 'skill', 'middleware' => 'auth'], function(){
+        Route::get('/', [SkillController::class, 'index'])->name('skill.index');
+        Route::get('create', [SkillController::class, 'create'])->name('skill.create');
+        Route::post('/', [SkillController::class, 'store'])->name('skill.store');
+        Route::get('/edit/{slug}', [SkillController::class, 'edit'])->name('skill.edit');
+        Route::get('/view/{slug}', [SkillController::class, 'view'])->name('skill.view');
+        Route::put('/update', [SkillController::class, 'update'])->name('skill.update');
+        Route::get('/softdelete/{slug}', [SkillController::class, 'softdelete'])->name('skill.softdelete');
+    });
+
 });
 
 
