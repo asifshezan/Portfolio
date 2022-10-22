@@ -54,10 +54,10 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::get('/', [AboutController::class, 'index'])->name('about.index');
         Route::get('/create', [AboutController::class, 'create'])->name('about.create');
         Route::post('/store', [AboutController::class, 'store'])->name('about.store');
-        Route::get('/edit/{id}', [AboutController::class, 'edit'])->name('about.edit');
-        Route::get('/view/{id}', [AboutController::class, 'view'])->name('about.view');
+        Route::get('/edit/{slug}', [AboutController::class, 'edit'])->name('about.edit');
+        Route::get('/view/{slug}', [AboutController::class, 'view'])->name('about.view');
         Route::put('/update', [AboutController::class, 'update'])->name('about.update');
-        Route::get('/softdelete', [ContactController::class, 'softdelete'])->name('about.softdelete');
+        Route::get('/softdelete/{slug}', [ContactController::class, 'softdelete'])->name('about.softdelete');
         Route::get('/delete', [AboutController::class, 'destroy'])->name('about.destroy');
     });
 
