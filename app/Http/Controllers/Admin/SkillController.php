@@ -50,4 +50,41 @@ class SkillController extends Controller
             return redirect()->back();
         }
     }
+
+    public function view($slug){
+        $data = Skill::where('skill_status',1)->where('skill_slug',$slug)->firstOrFail();
+        return view('admin.skills.view', compact('data'));
+    }
+
+
+    public function edit($slug){
+        $data = Skill::where('skill_status',1)->where('skill_slug',$slug)->firstOrFail();
+        return view('admin.skills.edit', compact('data'));
+    }
+
+    public function update(Request $request){
+        $this->validate($request, [
+            'skill_title' => ['required']
+        ], [
+            'skill_title.required' => 'Please enter the title'
+        ]);
+
+        $id = $request['skill_id'];
+        $slug = Str::slug($request['skill_title'],'-');
+        $update = Skill::where('skill_id',$id)->update([
+            'skill_title' => $request['skill_title'],
+            'skill_subtitle' => $request['skill_subtitle'],
+            'skill_details' => $request['skill_details'],
+            'skill_slug' => $slug,
+            'updated_at' => Carbon::now()->toDateTimeString()
+        ]);
+
+        if($update){
+            Session::flash('success','Successfully update');
+            return redirect()->route('skill.index');
+        }else{
+            Session::flash('error','Opps!! Failed to update');
+            return redirect()->back();
+        }
+    }
 }
