@@ -18,6 +18,7 @@ class CreateSkillsTable extends Migration
             $table->string('skill_title')->nullable();
             $table->string('skill_subtitle')->nullable();
             $table->string('skill_details')->nullable();
+            $table->string('skill_slug',50);
             $table->integer('skill_status')->default(1);
             $table->timestamps();
         });

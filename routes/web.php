@@ -116,7 +116,7 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::get('/softdelete/{slug}', [PortfolioCategoryController::class, 'softdelete'])->name('portfolio_category.softdelete');
     });
 
-    Route::group(['prefix' => 'skill', 'middleware' => 'auth'], function(){
+    Route::group(['prefix' => 'skills', 'middleware' => 'auth'], function(){
         Route::get('/', [SkillController::class, 'index'])->name('skill.index');
         Route::get('create', [SkillController::class, 'create'])->name('skill.create');
         Route::post('/', [SkillController::class, 'store'])->name('skill.store');
