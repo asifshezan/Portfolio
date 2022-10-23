@@ -87,4 +87,18 @@ class SkillController extends Controller
             return redirect()->back();
         }
     }
+
+    public function softdelete(){
+        $soft = Skill::where('skill_status',1)->update([
+            'skill_status' => 0
+        ]);
+
+        if($soft){
+            Session::flash('success','Successfully delete.');
+            return redirect()->back();
+        }else{
+            Session::flash('error','Opps! failed to delete');
+            return redirect()->back();
+        }
+    }
 }

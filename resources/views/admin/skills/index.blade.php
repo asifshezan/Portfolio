@@ -59,7 +59,7 @@
                                                     Edit</a>
                                             </li>
                                             <li>
-                                                <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".bs-example-modal-sm{{ $data['ab_id'] }}"><i class=" bx bxs-trash-alt label-icon"></i> Delete</a>
+                                                <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target=".bs-example-modal-sm{{ $data['skill_slug'] }}"><i class=" bx bxs-trash-alt label-icon"></i> Delete</a>
                                             </li>
                                         </ul>
                                     </div>
