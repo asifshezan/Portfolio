@@ -82,10 +82,6 @@
                     </div>
 
                 </div>
-
-                <!-- Quote Button -->
-                <div class="services_button"><a href="#">Ask for a Quote</a></div>
-
             </div>
 
         </div>
