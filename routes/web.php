@@ -127,6 +127,16 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::get('/softdelete/{slug}', [SkillController::class, 'softdelete'])->name('skill.softdelete');
     });
 
+    Route::group(['prefix' => 'service', 'middleware' => 'auth'], function(){
+        Route::get('/', [ServiceController::class, 'index'])->name('service.index');
+        Route::get('create', [ServiceController::class, 'create'])->name('service.create');
+        Route::post('/', [ServiceController::class, 'store'])->name('service.store');
+        Route::get('/edit/{slug}', [ServiceController::class, 'edit'])->name('service.edit');
+        Route::get('/view/{slug}', [ServiceController::class, 'view'])->name('service.view');
+        Route::put('/update', [ServiceController::class, 'update'])->name('service.update');
+        Route::get('/softdelete/{slug}', [ServiceController::class, 'softdelete'])->name('service.softdelete');
+    });
+
 });
 
 
