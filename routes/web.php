@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ContactMessageController;
 use App\Http\Controllers\Admin\PortfolioCategoryController;
 use App\Http\Controllers\Admin\SkillController;
+use App\Http\Controllers\Admin\ServiceController;
 
 use GuzzleHttp\Middleware;
 
