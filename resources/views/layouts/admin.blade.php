@@ -260,7 +260,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="">
+                                <a href="{{ route('service.index') }}" class="">
                                     <i class="bx bx-globe"></i>
                                     <span data-key="t-services">Services Page</span>
                                 </a>
