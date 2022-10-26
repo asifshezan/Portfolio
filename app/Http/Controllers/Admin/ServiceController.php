@@ -91,4 +91,18 @@ class ServiceController extends Controller
             return redirect()->back();
         }
     }
+
+    public function softdelete($slug){
+        $soft = Service::where('ser_status',1)->where('ser_slug',$slug)->update([
+            'ser_status' => 0
+        ]);
+        if($soft){
+            Session::flash('success','Successfully Delete.');
+            return redirect()->route('service.index');
+        }else{
+            Session::flash('error','Opps!! Failed to Delete.');
+            return redirect()->back();
+        }
+    }
+
 }

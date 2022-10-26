@@ -109,7 +109,7 @@ class PortfolioCategoryController extends Controller
     }
 
     public function softdelete($slug){
-        $softdelete = Portfolio_Category::where('port_cate_status',1)->update([
+        $softdelete = Portfolio_Category::where('port_cate_status',1)->where('port_cate_slug',$slug)->update([
             'port_cate_status' => 0
         ]);
 

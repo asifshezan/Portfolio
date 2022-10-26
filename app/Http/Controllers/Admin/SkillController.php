@@ -88,8 +88,8 @@ class SkillController extends Controller
         }
     }
 
-    public function softdelete(){
-        $soft = Skill::where('skill_status',1)->update([
+    public function softdelete($slug){
+        $soft = Skill::where('skill_status',1)->where('skill_slug',$slug)->update([
             'skill_status' => 0
         ]);
 
