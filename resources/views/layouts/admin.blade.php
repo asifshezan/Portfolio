@@ -249,49 +249,49 @@
 
                             <li>
                                 <a href="{{ route('about.index')}}" class="">
-                                    <i class="bx bx-globe"></i>
+                                    <i class="mdi mdi-account-edit"></i>
                                     <span data-key="t-about">About Page</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ route('skill.index') }}" class="">
-                                    <i class="bx bx-globe"></i>
+                                    <i class="mdi mdi-run-fast"></i>
                                     <span data-key="t-skill">Skill Page</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ route('service.index') }}" class="">
-                                    <i class="bx bx-globe"></i>
+                                    <i class="mdi mdi-sitemap-outline"></i>
                                     <span data-key="t-services">Services Page</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ route('experience.index')}}" class="">
-                                    <i class="bx bx-globe"></i>
+                                    <i class="mdi mdi-briefcase-account"></i>
                                     <span data-key="t-expericence">Expericence Page</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ route('education.index')}}" class="">
-                                    <i class="bx bx-globe"></i>
+                                    <i class="mdi mdi-book-education"></i>
                                     <span data-key="t-education">Education Page</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ route('portfolio_category.index')}}" class="">
-                                    <i class="bx bx-globe"></i>
+                                    <i class="bx bx-body"></i>
                                     <span data-key="t-portfolio">Portfolio Category</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ route('contact.index') }}" class="">
-                                    <i class="bx bx-globe"></i>
+                                    <i class="bx bxs-contact"></i>
                                     <span data-key="t-contact">Contact Page</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ route('contact_mess.index') }}" class="">
-                                    <i class="bx bx-globe"></i>
+                                    <i class="bx bxl-messenger"></i>
                                     <span data-key="t-contact">Contact Message</span>
                                 </a>
                             </li>
