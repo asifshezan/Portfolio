@@ -301,7 +301,12 @@
                                     <span data-key="t-website">Website</span>
                                 </a>
                             </li>
-
+                            <li>
+                                <a href="" class="">
+                                    <i class="mdi mdi-account-cog"></i>
+                                    <span data-key="t-contact">Basic Information</span>
+                                </a>
+                            </li>
                             <form action="{{ route('logout')}}" method="POST" id="logout-form">
                             @csrf
                                 <li>
