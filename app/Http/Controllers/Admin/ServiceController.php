@@ -52,4 +52,9 @@ class ServiceController extends Controller
             return redirect()->back();
         }
     }
+
+    public function view($slug){
+        $data = Service::where('ser_status',1)->where('ser_slug',$slug)->firstOrFail();
+        return view('admin.services.view', compact('data'));
+    }
 }
