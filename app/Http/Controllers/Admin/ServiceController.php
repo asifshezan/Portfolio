@@ -57,4 +57,38 @@ class ServiceController extends Controller
         $data = Service::where('ser_status',1)->where('ser_slug',$slug)->firstOrFail();
         return view('admin.services.view', compact('data'));
     }
+
+    public function edit($slug){
+        $data = Service::where('ser_status',1)->where('ser_slug',$slug)->firstOrFail();
+        return view('admin.services.edit', compact('data'));
+    }
+
+    public function update(Request $request){
+        $this->validate($request, [
+            'ser_title' => ['required']
+        ], [
+            'ser_title.required' => 'Please enter the title'
+        ]);
+
+
+        $id = $request['ser_id'];
+        $slug = Str::slug($request['ser_page_title']);
+        $update = Service::where('ser_id', $id)->update([
+            'ser_page_title' => $request['ser_page_title'],
+            'ser_page_subtitle' => $request['ser_page_subtitle'],
+            'ser_icon' => $request['ser_icon'],
+            'ser_title' => $request['ser_title'],
+            'ser_text' => $request['ser_text'],
+            'ser_slug' => $slug,
+            'updated_at' => Carbon::now()->toDateTimeString()
+        ]);
+
+        if($update){
+            Session::flash('success','Successfully Update.');
+            return redirect()->route('service.index');
+        }else{
+            Session::flash('error','Opps!! Failed to Update.');
+            return redirect()->back();
+        }
+    }
 }
