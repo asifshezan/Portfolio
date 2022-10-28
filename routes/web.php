@@ -138,10 +138,8 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::get('/softdelete/{slug}', [ServiceController::class, 'softdelete'])->name('service.softdelete');
     });
 
-    Route::group(['prefix' => 'basic_info', 'middleware' => 'auth'], function(){
-        Route::get('/', [Basic_InfoController::class, 'index'])->name('basic_info.index');
-        Route::post('/update', [Basic_InfoController::class, 'update'])->name('basic_info.update');
-    });
+    Route::get('dashboard/basic_info', [Basic_InfoController::class, 'index']);
+    Route::post('dashboard/basic_info/update', [Basic_InfoController::class, 'update']);
 
 });
 

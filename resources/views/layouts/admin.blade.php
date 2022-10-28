@@ -302,7 +302,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('basic_info.update') }}" class="">
+                                <a href="{{ url('dashboard/basic_info') }}" class="">
                                     <i class="mdi mdi-account-cog"></i>
                                     <span data-key="t-contact">Basic Information</span>
                                 </a>

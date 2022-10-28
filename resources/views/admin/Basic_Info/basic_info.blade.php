@@ -2,23 +2,18 @@
 @section('content')
 <div class="row">
     <div class="col-md-12">
-        <form method="POST" action="{{ route('basic_info.update') }}" enctype="multipart/form-data">
+        <form action="{{ url('dashboard/basic_info/update') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card">
-                <div class="card-header card_header bg-dark">
+                <div class="card-header card_header">
                     <div class="row">
                         <div class="col-md-8 card_header_title">
-                            <i class="fab fa-gg-circle"></i>Basic Information</div>
-                        <div class="col-md-4 card_header_btn">
-                            <a class="btn btn-sm btn-secondary chb_btn" href=""><i
-                                    class="fas fa-bars"></i> Contact Information</a>
-                        </div>
+                            <h3><b>Basic Information</b></h3></div>
                     </div>
                 </div>
                 <div class="card-body card_body">
                     <div class="row mb-3 {{$errors->has('info_name') ? 'has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Name<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Name:</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control form_control" name="info_name" value="{{ $basic_all->info_name }}">
                             @if ($errors->has('info_name'))
@@ -27,8 +22,7 @@
                         </div>
                     </div>
                     <div class="row mb-3 {{$errors->has('info_location') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Location<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Location:</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control form_control" name="info_location" value="{{ $basic_all->info_location }}">
                             @if ($errors->has('info_location'))
@@ -37,8 +31,7 @@
                         </div>
                     </div>
                     <div class="row mb-3 {{$errors->has('info_birth') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Birth Date<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Birth Date:</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control form_control" name="info_birth" value="{{ $basic_all->info_birth }}">
                             @if ($errors->has('info_birth'))
@@ -47,8 +40,7 @@
                         </div>
                     </div>
                     <div class="row mb-3 {{$errors->has('info_email') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Email<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Email:</label>
                         <div class="col-sm-7">
                             <input type="email" class="form-control form_control" name="info_email" value="{{ $basic_all->info_email }}">
                             @if ($errors->has('info_email'))
@@ -57,8 +49,7 @@
                         </div>
                     </div>
                     <div class="row mb-3 {{$errors->has('info_phone') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Phone<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Phone:</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control form_control" name="info_phone" value="{{ $basic_all->info_phone }}">
                             @if ($errors->has('info_phone'))
@@ -67,8 +58,7 @@
                         </div>
                     </div>
                     <div class="row mb-3 {{$errors->has('info_website') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Website<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Website:</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control form_control" name="info_website" value="{{ $basic_all->info_website }}">
                             @if ($errors->has('info_website'))
@@ -77,8 +67,7 @@
                         </div>
                     </div>
                     <div class="row mb-3 {{$errors->has('info_facebook') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Facebook<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Facebook:</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control form_control" name="info_facebook" value="{{ $basic_all->info_facebook }}">
                             @if ($errors->has('info_facebook'))
@@ -87,8 +76,7 @@
                         </div>
                     </div>
                     <div class="row mb-3 {{$errors->has('info_instagram') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Instagram<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Instagram:</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control form_control" name="info_instagram" value="{{ $basic_all->info_instagram }}">
                             @if ($errors->has('info_instagram'))
@@ -97,8 +85,7 @@
                         </div>
                     </div>
                     <div class="row mb-3 {{$errors->has('info_linkedin') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Linkedin<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Linkedin:</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control form_control" name="info_linkedin" value="{{ $basic_all->info_linkedin }}">
                             @if ($errors->has('info_linkedin'))
@@ -107,8 +94,7 @@
                         </div>
                     </div>
                     <div class="row mb-3 {{$errors->has('info_google') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Google<span
-                                class="req_star">*</span>:</label>
+                        <label class="col-sm-3 col-form-label col_form_label">Google:</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control form_control" name="info_google" value="{{ $basic_all->info_google }}">
                             @if ($errors->has('info_google'))
