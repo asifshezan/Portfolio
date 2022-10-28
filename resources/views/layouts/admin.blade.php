@@ -302,7 +302,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" class="">
+                                <a href="{{ route('basic_info.update') }}" class="">
                                     <i class="mdi mdi-account-cog"></i>
                                     <span data-key="t-contact">Basic Information</span>
                                 </a>
@@ -314,28 +314,13 @@
                                         <i class="mdi mdi-logout font-size-16 align-middle me-1 text-danger"></i>Logout</a>
                                     </a>
                                 </li>
-
                             </form>
-
-
-
-
-
-
-
-
-
-
                         </ul>
-
                     </div>
                     <!-- Sidebar -->
                 </div>
             </div>
             <!-- Left Sidebar End -->
-
-
-
             <!-- ============================================================== -->
             <!-- Start right Content here -->
             <!-- ============================================================== -->

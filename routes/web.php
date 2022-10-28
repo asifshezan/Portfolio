@@ -139,8 +139,8 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
     });
 
     Route::group(['prefix' => 'basic_info', 'middleware' => 'auth'], function(){
-        Route::get('/', [Basic_InfoController::class, 'index']);
-        Route::post('/update', [Basic_InfoController::class, 'update']);
+        Route::get('/', [Basic_InfoController::class, 'index'])->name('basic_info.index');
+        Route::post('/update', [Basic_InfoController::class, 'update'])->name('basic_info.update');
     });
 
 });
