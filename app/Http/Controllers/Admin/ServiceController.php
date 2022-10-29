@@ -32,10 +32,8 @@ class ServiceController extends Controller
             'ser_title.required' => 'Please enter the title'
         ]);
 
-        $slug = Str::slug($request['ser_page_title'],'-');
+        $slug = Str::slug($request['ser_title'],'-');
         $insert = Service::insertGetId([
-            'ser_page_title' => $request['ser_page_title'],
-            'ser_page_subtitle' => $request['ser_page_subtitle'],
             'ser_icon' => $request['ser_icon'],
             'ser_title' => $request['ser_title'],
             'ser_text' => $request['ser_text'],
@@ -72,10 +70,8 @@ class ServiceController extends Controller
 
 
         $id = $request['ser_id'];
-        $slug = Str::slug($request['ser_page_title']);
+        $slug = Str::slug($request['ser_title']);
         $update = Service::where('ser_id', $id)->update([
-            'ser_page_title' => $request['ser_page_title'],
-            'ser_page_subtitle' => $request['ser_page_subtitle'],
             'ser_icon' => $request['ser_icon'],
             'ser_title' => $request['ser_title'],
             'ser_text' => $request['ser_text'],

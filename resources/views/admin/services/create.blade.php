@@ -30,20 +30,6 @@
                         @csrf
                         <div class="row form-group">
                             <div class="col-md-6 my-2">
-                                <label for="ser_page_title">Service Page Title</label>
-                                <input class="form-control" type="text" name="ser_page_title" value="{{ old('ser_page_title') }}">
-                                @error('ser_page_title')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
-                                <label for="ser_page_subtitle">Service Page Sub-Title</label>
-                                <input class="form-control" type="text" name="ser_page_subtitle" value="{{ old('ser_page_subtitle') }}">
-                                @error('ser_page_subtitle')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
                                 <label for="ser_icon">Service Icon</label>
                                 <input class="form-control" type="text" name="ser_icon" value="{{ old('ser_icon') }}">
                                 @error('ser_icon')

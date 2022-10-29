@@ -41,7 +41,7 @@
                             <tr>
                                 <td>{{ $data['skill_title'] }}</td>
                                 <td>{{ $data['skill_subtitle'] }}</td>
-                                <td>{{ $data['skill_details'] }}</td>
+                                <td>{{ Str::limit($data['skill_details'],50) }}</td>
                                 <td class="text-center">
                                     <div class="btn-group" role="group">
                                         <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"

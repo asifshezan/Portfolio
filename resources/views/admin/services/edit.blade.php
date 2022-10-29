@@ -32,21 +32,6 @@
                         @method('PUT')
                         <div class="row form-group">
                         <div class="col-md-6 my-2">
-                            <label for="ser_page_title">Service Page Title</label>
-                            <input type="hidden" name="ser_id" value="{{ $data->ser_id }}">
-                            <input class="form-control" type="text" name="ser_page_title" value="{{ $data->ser_page_title }}">
-                            @error('ser_page_title')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div class="col-md-6 my-2">
-                            <label for="ser_page_subtitle">Service Page Sub-Title</label>
-                            <input class="form-control" type="text" name="ser_page_subtitle" value="{{ $data->ser_page_subtitle }}">
-                            @error('ser_page_subtitle')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div class="col-md-6 my-2">
                             <label for="ser_icon">Service Icon</label>
                             <input class="form-control" type="text" name="ser_icon" value="{{ $data->ser_icon }}">
                             @error('ser_icon')
@@ -55,6 +40,7 @@
                         </div>
                         <div class="col-md-6 my-2">
                             <label for="ser_title">Service Title</label>
+                            <input type="hidden" name="ser_id" value="{{ $data->ser_id }}">
                             <input class="form-control" type="text" name="ser_title" value="{{ $data->ser_title }}">
                             @error('ser_title')
                                 <span class="text-danger">{{ $message }}</span>

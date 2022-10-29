@@ -17,7 +17,7 @@
 					<ul>
 						<li class="portfolio_category active is-checked" data-filter="*">All</li>
                         @foreach ($alldata as $data )
-                        <li class="portfolio_category" data-filter=".w_design">{{ $data->port_cate_title }}</li>
+                        <li class="portfolio_category" data-filter=".xyz_{{ $data->port_cate_id}}">{{ $data->port_cate_title }}</li>
                         @endforeach
 					</ul>
 				</div>
@@ -27,7 +27,7 @@
 
                         @foreach ($alldata as $data)
                             <!-- Portfolio Item -->
-						<div class="grid-item portfolio_item w_design">
+						<div class="grid-item portfolio_item xyz_{{ $data->port_cate_id}}">
 							<img src="{{ asset('uploads/portfolio_category/'.$data->port_cate_image)}}" alt="">
 							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
 								<div class="portfolio_item_title">Design</div>
