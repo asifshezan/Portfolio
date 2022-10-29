@@ -17,12 +17,8 @@
 						<div class="about_text">
 							<h4> {{ $about->ab_details }} </h4>
 						</div>
-
 						<!-- Loaders -->
 					</div>
 				</div>
-
 			</div>
-
-
 @endsection
