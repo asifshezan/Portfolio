@@ -35,7 +35,7 @@ class Basic_InfoController extends Controller
             'info_linkedin' => $request['info_linkedin'],
             'info_google' => $request['info_google'],
             'info_status' => 1,
-            'created_at' => Carbon::now()->toDateTimeString(),
+            'updated_at' => Carbon::now()->toDateTimeString(),
         ]);
 
         if($request->hasFile('info_image')){

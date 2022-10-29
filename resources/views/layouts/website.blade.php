@@ -44,7 +44,7 @@
 					<li class="{{ request()->routeIs('website.contact') ? 'active' : '' }}"><a href="{{ route('website.contact')}}">Contact</a></li>
 				</ul>
 				<div class="header_button ml-auto">
-					<a href="#">Available for freelance work</a>
+					<a href="https://www.fiverr.com/asifwebdev">Available for freelance work</a>
 					<div class="d-flex flex-column align-items-center justify-content-center"><img src="{{asset('contents/website')}}/images/download.png" alt=""></div>
 				</div>
 			</div>
@@ -63,45 +63,48 @@
 						<div class="background_image" style="background-image:url({{asset('contents/website')}}/images/asif.JPG); margin-bottom:30px;"></div>
 					</div>
 				</div>
+                @php
+                    $basic_all = App\Models\Basic_Info::where('info_status',1)->firstOrFail();
+                @endphp
 				<div class="general_info_content">
 					<div class="general_info_content_inner mCustomScrollbar" data-mcs-theme="minimal-dark">
 						<div class="general_info_title">General Information</div>
 						<ul class="general_info_list">
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_1.png" alt=""></div>
-								<div class="general_info_text">Name: <span>Asif Ahamed</span></div>
+								<div class="general_info_text">Name: <span>{{ $basic_all->info_name }}</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center">
                                     <i class="fa fa-map-marker"></i>
                                 </div>
 
-								<div class="general_info_text">Location: <span>Purbachal Road, Uttar Badda.</span></div>
+								<div class="general_info_text">Location: <span>{{ $basic_all->info_location }}</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_2.png" alt=""></div>
-								<div class="general_info_text">Date of Birth: <span>July 27, 1997</span></div>
+								<div class="general_info_text">Date of Birth: <span>{{ $basic_all->info_birth }}</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_3.png" alt=""></div>
-								<div class="general_info_text"><a href="mailto:asifshezan7@gmail.com?subject=Job_Inquiry">asifshezan7@gmail.com</a></div>
+								<div class="general_info_text"><a href="mailto:asifshezan7@gmail.com?subject=Job_Inquiry">{{ $basic_all->info_email }}</a></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_4.png" alt=""></div>
-								<div class="general_info_text">+88 0151-6788837</div>
+								<div class="general_info_text">{{ $basic_all->info_phone }}</div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_5.png" alt=""></div>
-								<div class="general_info_text"><a href="https://asifwebdev.com">https://asifwebdev.com</a></div>
+								<div class="general_info_text"><a href="https://asifwebdev.com">{{ $basic_all->info_website }}</a></div>
 							</li>
 						</ul>
 
 						<!-- Social -->
 						<div class="social_container">
 							<ul class="d-flex flex-row align-items-start justify-content-start">
-								<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								<li><a href="{{ $basic_all->info_instagram }}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="{{ $basic_all->info_facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
