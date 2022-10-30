@@ -36,14 +36,6 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th>Page-Title :</th>
-                                    <td>{{ $data['edu_page_title'] }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Page Sub-Title :</th>
-                                    <td>{{ $data['edu_page_subtitle'] }}</td>
-                                </tr>
-                                <tr>
                                     <th>Year :</th>
                                     <td>{{ $data['edu_year'] }}</td>
                                 </tr>

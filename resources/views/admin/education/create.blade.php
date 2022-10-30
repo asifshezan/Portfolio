@@ -4,12 +4,12 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0 font-size-18">education</h4>
+            <h4 class="mb-sm-0 font-size-18">Education</h4>
 
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="javascript: void(0);">education</a></li>
-                    <li class="breadcrumb-item active">Create education</li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Education</a></li>
+                    <li class="breadcrumb-item active">Create Education</li>
                 </ol>
             </div>
 
@@ -20,29 +20,15 @@
     <div class="col-md-12">
         <div class="card border border-primary">
             <div class="card-header bg-transparent border-primary d-flex justify-content-between">
-                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>Create education </h5>
+                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>Create Education </h5>
                 <a href="{{ route('education.index') }}" class="btn btn-sm btn-primary waves-effect waves-light">
-                    <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> All education</a>
+                    <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> All Education</a>
             </div>
             <div class="card-body">
                 <div class="card-body">
                     <form action="{{ route('education.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row form-group">
-                            <div class="col-md-6 my-2">
-                                <label for="edu_page_title">Education Page Title</label>
-                                <input class="form-control" type="text" name="edu_page_title" value="{{ old('edu_page_title') }}">
-                                @error('edu_page_title')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
-                                <label for="edu_page_subtitle">Education Page Sub-Title</label>
-                                <input class="form-control" type="text" name="edu_page_subtitle" value="{{ old('edu_page_subtitle') }}">
-                                @error('edu_page_subtitle')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
                             <div class="col-md-6 my-2">
                                 <label for="edu_year">Education Year</label>
                                 <input class="form-control" type="text" name="edu_year" value="{{ old('edu_year') }}">

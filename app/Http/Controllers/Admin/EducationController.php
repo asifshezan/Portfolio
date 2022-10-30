@@ -29,8 +29,6 @@ class EducationController extends Controller
     public function store(Request $request){
         $slug = uniqid();
         $insert = Education::insertGetId([
-            'edu_page_title' => $request['edu_page_title'],
-            'edu_page_subtitle' => $request['edu_page_subtitle'],
             'edu_year' => $request['edu_year'],
             'edu_title' => $request['edu_title'],
             'edu_subtitle' => $request['edu_subtitle'],
@@ -73,8 +71,6 @@ class EducationController extends Controller
         $id = $request->edu_id;
 
         $update = Education::where('edu_id',$id)->update([
-            'edu_page_title' => $request['edu_page_title'],
-            'edu_page_subtitle' => $request['edu_page_subtitle'],
             'edu_year' => $request['edu_year'],
             'edu_title' => $request['edu_title'],
             'edu_subtitle' => $request['edu_subtitle'],

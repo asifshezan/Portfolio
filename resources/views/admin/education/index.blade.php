@@ -31,8 +31,6 @@
                         <thead>
                             <tr>
                                 <th>Image</th>
-                                <th>Page-Title</th>
-                                <th>Page Sub-Title</th>
                                 <th>Year</th>
                                 <th>Edu. Title</th>
                                 <th>Edu. Sub-Title</th>
@@ -50,8 +48,6 @@
                                     <img height="40" src="{{ asset('uploads/download.png')}}">
                                     @endif
                                 </td>
-                                <td>{{ $data['edu_page_title'] }}</td>
-                                <td>{{ $data['edu_page_subtitle'] }}</td>
                                 <td>{{ $data['edu_year'] }}</td>
                                 <td>{{ $data['edu_title'] }}</td>
                                 <td>{{ $data['edu_subtitle'] }}</td>
