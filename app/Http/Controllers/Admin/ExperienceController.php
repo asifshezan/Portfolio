@@ -18,7 +18,7 @@ class ExperienceController extends Controller
     }
 
     public function index(){
-        $all = Experience::where('exp_status',1)->orderBy('exp_id','ASC')->get();
+        $all = Experience::where('exp_status',1)->orderBy('exp_id','DESC')->get();
         return view('admin.experience.index', compact('all'));
     }
 
