@@ -4,12 +4,12 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0 font-size-18">experience</h4>
+            <h4 class="mb-sm-0 font-size-18">Experience</h4>
 
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="javascript: void(0);">experience</a></li>
-                    <li class="breadcrumb-item active">Create experience</li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Experience</a></li>
+                    <li class="breadcrumb-item active">Create Experience</li>
                 </ol>
             </div>
 
@@ -20,9 +20,9 @@
     <div class="col-md-12">
         <div class="card border border-primary">
             <div class="card-header bg-transparent border-primary d-flex justify-content-between">
-                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>Create experience </h5>
+                <h5 class="my-0 text-primary align-middle"><i class="mdi mdi-bullseye-arrow me-3"></i>Create Experience </h5>
                 <a href="{{ route('experience.index') }}" class="btn btn-sm btn-primary waves-effect waves-light">
-                    <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> All experience</a>
+                    <i class="bx bx-list-plus font-size-20 align-middle me-2"></i> All Experience</a>
             </div>
             <div class="card-body">
                 <div class="card-body">
