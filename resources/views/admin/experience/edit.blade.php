@@ -32,28 +32,13 @@
                         @method('PUT')
                         <div class="row form-group">
                             <div class="col-md-6 my-2">
-                                <label for="exp_page_title">Page Title</label>
-                                <input type="hidden" name="exp_id" value="{{ $data->exp_id }}">
-                                <input class="form-control" type="text" name="exp_page_title" value="{{ $data->exp_page_title }}">
-                                @error('exp_page_title')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
-                                <label for="exp_page_subtitle">Page Sub-Title</label>
-                                <input class="form-control" type="text" name="exp_page_subtitle" value="{{ $data->exp_page_subtitle }}">
-                                @error('exp_page_subtitle')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
                                 <label for="exp_title">Experience Title</label>
+                                <input type="hidden" name="exp_id" value="{{ $data->exp_id }}">
                                 <input class="form-control" type="text" name="exp_title" value="{{ $data->exp_title }}">
                                 @error('exp_title')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-
                         <div class="col-md-6 my-2">
                             <label for="exp_subtitle">Experience Sub-Title</label>
                             <input class="form-control" type="text" name="exp_subtitle" value="{{ $data->exp_subtitle }}">

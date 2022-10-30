@@ -14,7 +14,7 @@
 				<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
 					<div class="about_content">
 						<div class="about_title">Description</div>
-						<div class="about_text">
+						<div class="about_text center">
 							<h4> {{ $about->ab_details }} </h4>
 						</div>
 						<!-- Loaders -->

@@ -30,20 +30,6 @@
                         @csrf
                         <div class="row form-group">
                             <div class="col-md-6 my-2">
-                                <label for="exp_page_title">Experience Page Title</label>
-                                <input class="form-control" type="text" name="exp_page_title" value="{{ old('exp_page_title') }}">
-                                @error('exp_page_title')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
-                                <label for="exp_page_subtitle">Experience Page Sub-Title</label>
-                                <input class="form-control" type="text" name="exp_page_subtitle" value="{{ old('exp_page_subtitle') }}">
-                                @error('exp_page_subtitle')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-6 my-2">
                                 <label for="exp_year">Experience Year</label>
                                 <input class="form-control" type="text" name="exp_year" value="{{ old('exp_year') }}">
                                 @error('exp_year')

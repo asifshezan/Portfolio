@@ -30,8 +30,6 @@
                     <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                         <thead>
                             <tr>
-                                <th>Page-Title</th>
-                                <th>Page Sub-Title</th>
                                 <th>Year</th>
                                 <th>Exp. Title</th>
                                 <th>Exp. Sub-Title</th>
@@ -42,12 +40,10 @@
                         <tbody>
                             @foreach ($all as $data)
                             <tr>
-                                <td>{{ $data['exp_page_title'] }}</td>
-                                <td>{{ $data['exp_page_subtitle'] }}</td>
                                 <td>{{ $data['exp_year'] }}</td>
                                 <td>{{ $data['exp_title'] }}</td>
                                 <td>{{ $data['exp_subtitle'] }}</td>
-                                <td>{{ Str::limit( $data['exp_text'], 35)}}</td>
+                                <td>{{ Str::limit( $data['exp_text'], 50)}}</td>
                                 <td class="text-center">
                                     <div class="btn-group" role="group">
                                         <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"

@@ -29,8 +29,6 @@ class ExperienceController extends Controller
     public function store(Request $request){
         $slug = uniqid();
         $insert = Experience::insertGetId([
-            'exp_page_title' => $request['exp_page_title'],
-            'exp_page_subtitle' => $request['exp_page_subtitle'],
             'exp_year' => $request['exp_year'],
             'exp_title' => $request['exp_title'],
             'exp_subtitle' => $request['exp_subtitle'],
@@ -63,8 +61,6 @@ class ExperienceController extends Controller
         $id = $request->exp_id;
 
         $update = Experience::where('exp_id',$id)->update([
-            'exp_page_title' => $request['exp_page_title'],
-            'exp_page_subtitle' => $request['exp_page_subtitle'],
             'exp_year' => $request['exp_year'],
             'exp_title' => $request['exp_title'],
             'exp_subtitle' => $request['exp_subtitle'],
