@@ -39,7 +39,13 @@
                         <tbody>
                             @foreach ($all as $data)
                             <tr>
-                                <td>{{ $data['ser_icon'] }}</td>
+                                <td>
+                                    @if($data['ser_icon'])
+                                    <img height="40" src="{{ asset('uploads/service/'.$data->ser_icon) }}" />
+                                    @else
+                                    <img height="40" src="{{ asset('uploads/download.png')}}">
+                                    @endif
+                                </td>
                                 <td>{{ $data['ser_title'] }}</td>
                                 <td>{{ $data['ser_text'] }}</td>
                                 <td class="text-center">

@@ -296,7 +296,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="_blank" class="">
+                                <a href="{{route('website.about')}}" target="_blank" class="">
                                     <i class="bx bx-globe"></i>
                                     <span data-key="t-website">Website</span>
                                 </a>

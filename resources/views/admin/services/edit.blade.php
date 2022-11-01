@@ -33,10 +33,17 @@
                         <div class="row form-group">
                         <div class="col-md-6 my-2">
                             <label for="ser_icon">Service Icon</label>
-                            <input class="form-control" type="text" name="ser_icon" value="{{ $data->ser_icon }}">
+                            <input class="form-control" type="file" name="image" value="{{ $data->ser_icon }}">
                             @error('ser_icon')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
+                        </div>
+                        <div class="col-md-6 my-2">
+                            @if ($data['ser_icon'])
+                            <img id="service_image_preview" style="width: 150px" class="m-auto" src="{{ asset('uploads/service/'.$data->edu_image) }}" alt="service Image">
+                            @else
+                            <img id="service_image_preview" style="width: 100px" class="m-auto" src="{{ asset('uploads/download.png') }}" alt="service Image">
+                            @endif
                         </div>
                         <div class="col-md-6 my-2">
                             <label for="ser_title">Service Title</label>

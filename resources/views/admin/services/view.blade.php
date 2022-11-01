@@ -37,7 +37,13 @@
                             <tbody>
                                 <tr>
                                     <th>Service Icon</th>
-                                    <td>{{ $data['ser_icon'] }}</td>
+                                    <td>
+                                        @if ($data->ser_icon)
+                                            <img height="40" src="{{ asset('uploads/service/'.$data->ser_icon)}}" />
+                                        @else
+                                            <img height="50" src="{{ asset('uploads/download.png')}}" />
+                                        @endif
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Service Title</th>
