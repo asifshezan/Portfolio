@@ -8,6 +8,7 @@ use App\Models\Service;
 use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Session;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class ServiceController extends Controller
 {
@@ -34,13 +35,22 @@ class ServiceController extends Controller
 
         $slug = Str::slug($request['ser_title'],'-');
         $insert = Service::insertGetId([
-            'ser_icon' => $request['ser_icon'],
             'ser_title' => $request['ser_title'],
             'ser_text' => $request['ser_text'],
             'ser_slug' => $slug,
             'ser_status' => 1,
             'created_at' => Carbon::now()->toDateTimeString()
         ]);
+
+        if($request->hasFile('ser_image')){
+            $image = $request->file('ser_image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->save('uploads/service/' . $imageName);
+
+            Service::where('ser_id',$insert)->update([
+                'ser_icon' => $imageName
+            ]);
+        }
 
         if($insert){
             Session::flash('success','Successfully insert');
@@ -68,16 +78,24 @@ class ServiceController extends Controller
             'ser_title.required' => 'Please enter the title'
         ]);
 
-
         $id = $request['ser_id'];
         $slug = Str::slug($request['ser_title']);
         $update = Service::where('ser_id', $id)->update([
-            'ser_icon' => $request['ser_icon'],
             'ser_title' => $request['ser_title'],
             'ser_text' => $request['ser_text'],
             'ser_slug' => $slug,
             'updated_at' => Carbon::now()->toDateTimeString()
         ]);
+
+        if($request->hasFile('ser_image')){
+            $image = $request->file('ser_image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->save('uploads/service/' . $imageName);
+
+            Service::where('ser_id',$id)->update([
+                'ser_icon' => $imageName
+            ]);
+        }
 
         if($update){
             Session::flash('success','Successfully Update.');

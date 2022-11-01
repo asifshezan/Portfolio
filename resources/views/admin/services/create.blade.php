@@ -31,7 +31,7 @@
                         <div class="row form-group">
                             <div class="col-md-6 my-2">
                                 <label for="ser_icon">Service Icon</label>
-                                <input class="form-control" type="file" name="image" value="{{ old('ser_icon') }}">
+                                <input class="form-control" type="file" name="ser_image" value="{{ old('ser_image') }}">
                                 @error('ser_icon')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror

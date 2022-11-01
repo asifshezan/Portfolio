@@ -40,8 +40,8 @@
                             @foreach ($all as $data)
                             <tr>
                                 <td>
-                                    @if($data['ser_icon'])
-                                    <img height="40" src="{{ asset('uploads/service/'.$data->ser_icon) }}" />
+                                    @if($data['ser_image'])
+                                    <img height="40" src="{{ asset('uploads/service/'.$data->ser_image) }}" />
                                     @else
                                     <img height="40" src="{{ asset('uploads/download.png')}}">
                                     @endif

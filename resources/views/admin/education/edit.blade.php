@@ -61,9 +61,9 @@
                             @enderror
                         </div>
                         <div class="col-md-6 my-2">
-                            <label for="education_image">Education Image</label>
-                            <input id="education_image_input" class="form-control" type="file" name="image" value="{{ $data->education_image }}">
-                            @error('education_image')
+                            <label for="edu_image">Education Image</label>
+                            <input id="edu_image_input" class="form-control" type="file" name="image" value="{{ $data->edu_image }}">
+                            @error('edu_image')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
