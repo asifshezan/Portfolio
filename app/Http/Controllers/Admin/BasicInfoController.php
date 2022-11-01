@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Intervention\Image\ImageManagerStatic as Image;
 
-class Basic_InfoController extends Controller
+class BasicInfoController extends Controller
 {
     public function __construct()
     {
@@ -18,10 +18,9 @@ class Basic_InfoController extends Controller
     }
 
     public function index(){
-        $basic_all = Basic_Info::where('info_status',1)->orderBy('info_id','DESC')->firstOrFail();
+        $basic_all = Basic_Info::where('info_status',1)->where('info_id',1)->firstOrFail();
         return view('admin.Basic_Info.basic_info', compact('basic_all'));
     }
-
     public function update(Request $request){
         $update = Basic_Info::where('info_status',1)->where('info_id',1)->update([
             'info_name' => $request['info_name'],
@@ -57,3 +56,4 @@ class Basic_InfoController extends Controller
         }
     }
 }
+

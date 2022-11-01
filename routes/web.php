@@ -14,7 +14,7 @@ use App\Http\Controllers\Admin\ContactMessageController;
 use App\Http\Controllers\Admin\PortfolioCategoryController;
 use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\ServiceController;
-use App\Http\Controllers\Admin\Basic_InfoController;
+use App\Http\Controllers\Admin\BasicInfoController;
 
 use GuzzleHttp\Middleware;
 
@@ -138,8 +138,10 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::get('/softdelete/{slug}', [ServiceController::class, 'softdelete'])->name('service.softdelete');
     });
 
-    Route::get('dashboard/basic_info', [Basic_InfoController::class, 'index']);
-    Route::post('dashboard/basic_info/update', [Basic_InfoController::class, 'update']);
+    Route::group(['prefix' => 'basic_info', 'middleware' => 'auth'], function(){
+        Route::get('/', [BasicInfoController::class, 'index'])->name('basic_info.index');
+        Route::post('update', [BasicInfoController::class, 'update'])->name('basic_info.update');
+    });
 
 });
 
