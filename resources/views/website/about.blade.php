@@ -17,8 +17,12 @@
 						<div class="about_text center">
 							<h4> {{ $about->ab_details }} </h4>
 						</div>
-						<!-- Loaders -->
 					</div>
+
 				</div>
+                <div class="about_button">
+                    <a href="https://www.fiverr.com/asifwebdev">Available for freelance work</a>
+                    <div class="d-flex flex-column align-items-center justify-content-center"><img src="{{asset('contents/website')}}/images/download.png" alt=""></div>
+                </div>
 			</div>
 @endsection

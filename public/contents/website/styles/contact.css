@@ -395,6 +395,68 @@ section
 	background: #100f3a;
 	pointer-events: none;
 }
+
+/* about button */
+
+.about_button
+{
+	position: absolute;
+	left: 80px;
+	bottom: 270px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_button_2
+{
+	display: none;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_button:hover,
+.about_button_2:hover
+{
+	background: #100f3a;
+}
+.about_button a,
+.about_button_2 a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 55px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-right: 82px;
+}
+.about_button > div,
+.about_button_2 > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background: #100f3a;
+	pointer-events: none;
+}
+
+/* end about button */
+
+
+
 .content_container
 {
 	width: 100%;
@@ -532,7 +594,7 @@ section
 .general_info_image
 {
 	width: 100%;
-	height: 473px;
+	height: 510px;
 }
 .general_info_content
 {

@@ -39,7 +39,7 @@ class BasicInfoController extends Controller
 
         if($request->hasFile('info_image')){
             $image = $request->file('info_image');
-            $imageName = time() . '-' . $image->getClientOriginalExtension();
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
             Image::make($image)->save('uploads/basics/' . $imageName);
 
             Basic_Info::where('info_id',1)->update([

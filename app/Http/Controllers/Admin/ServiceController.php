@@ -44,11 +44,11 @@ class ServiceController extends Controller
 
         if($request->hasFile('ser_image')){
             $image = $request->file('ser_image');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $imageName =  $insert . time() . '.' . $image->getClientOriginalExtension();
             Image::make($image)->save('uploads/service/' . $imageName);
 
             Service::where('ser_id',$insert)->update([
-                'ser_icon' => $imageName
+                'ser_image' => $imageName
             ]);
         }
 
@@ -89,11 +89,11 @@ class ServiceController extends Controller
 
         if($request->hasFile('ser_image')){
             $image = $request->file('ser_image');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $imageName =  $id . time() . '.' . $image->getClientOriginalExtension();
             Image::make($image)->save('uploads/service/' . $imageName);
 
             Service::where('ser_id',$id)->update([
-                'ser_icon' => $imageName
+                'ser_image' => $imageName
             ]);
         }
 

@@ -55,17 +55,16 @@
 
 	<div class="content_container">
 		<div class="main_content_outer d-flex flex-xl-row flex-column align-items-start justify-content-start">
-
+            @php
+            $basic_all = App\Models\Basic_Info::where('info_status',1)->firstOrFail();
+        @endphp
 			<!-- General Information -->
 			<div class="general_info d-flex flex-xl-column flex-md-row flex-column">
 				<div>
 					<div class="general_info_image">
-						<div class="background_image" style="background-image:url({{asset('contents/website')}}/images/asif.JPG); margin-bottom:30px;"></div>
+						<div class="background_image" style="background-image:url({{asset('uploads/basics/'.$basic_all->info_image)}});"></div>
 					</div>
 				</div>
-                @php
-                    $basic_all = App\Models\Basic_Info::where('info_status',1)->firstOrFail();
-                @endphp
 				<div class="general_info_content">
 					<div class="general_info_content_inner mCustomScrollbar" data-mcs-theme="minimal-dark">
 						<div class="general_info_title">General Information</div>
@@ -95,7 +94,7 @@
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/icon_5.png" alt=""></div>
-								<div class="general_info_text"><a href="https://asifwebdev.com">{{ $basic_all->info_website }}</a></div>
+								<div class="general_info_text"><a href="https://asifwebdev.xyz">{{ $basic_all->info_website }}</a></div>
 							</li>
 						</ul>
 
