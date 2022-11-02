@@ -17,10 +17,10 @@
             <div class="skills_text">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-9 center">
-                            <h3>{{ $skill->skill_details }}</h3>
+                        <div class="col-xl-10 center">
+                            <h4>{{ $skill->skill_details }}</h4>
                         </div>
-                        <div class="col-xl-2">
+                        <div class="col-xl-1">
                             {{-- <p>Phasellus vitae sapien porttitor, dignissim quam sit amet, aliquam lorem.
                                 Fusce id ligula non risus mollis consectetur. Nam lobortis,
                                 erat quis pulvinar dignissim, velit ligula ullamcorper ipsum, at sodales elit odio at velit.
@@ -47,7 +47,7 @@
                         <div class="col-xl-4 col-lg-6 pb_col">
                             <div class="pb_item">
                                 <div class="p_bar_title">CSS</div>
-                                <div id="skill_2_pbar" class="skill_barss" data-perc="0.95" data-name="skill_2_pbar" data-color-start="#ff4646" data-color-end="#ff26d9"></div>
+                                <div id="skill_2_pbar" class="skill_barss" data-perc="1" data-name="skill_2_pbar" data-color-start="#ff4646" data-color-end="#ff26d9"></div>
                             </div>
                         </div>
 
@@ -55,7 +55,7 @@
                         <div class="col-xl-4 col-lg-6 pb_col">
                             <div class="pb_item">
                                 <div class="p_bar_title">Bootstrap 5</div>
-                                <div id="skill_3_pbar" class="skill_barss" data-perc="0.90" data-name="skill_3_pbar" data-color-start="#0054ff" data-color-end="#ff23d3"></div>
+                                <div id="skill_3_pbar" class="skill_barss" data-perc="0.98" data-name="skill_3_pbar" data-color-start="#0054ff" data-color-end="#ff23d3"></div>
                             </div>
                         </div>
 
@@ -71,7 +71,7 @@
                         <div class="col-xl-4 col-lg-6 pb_col">
                             <div class="pb_item">
                                 <div class="p_bar_title">Laravel</div>
-                                <div id="skill_5_pbar" class="skill_barss" data-perc="0.70" data-name="skill_5_pbar" data-color-start="#79ff8f" data-color-end="#7b74ff"></div>
+                                <div id="skill_5_pbar" class="skill_barss" data-perc="0.75" data-name="skill_5_pbar" data-color-start="#79ff8f" data-color-end="#7b74ff"></div>
                             </div>
                         </div>
 

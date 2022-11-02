@@ -14,14 +14,14 @@
 				<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
 					<div class="about_content">
 						<div class="about_title">Description</div>
-						<div class="about_text center">
+						<div class="col-md-11 about_text">
 							<h4> {{ $about->ab_details }} </h4>
 						</div>
 					</div>
 
 				</div>
                 <div class="about_button">
-                    <a href="https://www.fiverr.com/asifwebdev">Available for freelance work</a>
+                    <a href="https://drive.google.com/file/d/1DEtp0PdNRg5KEfxfK_WjkMkoD9lb9Nkj/view?usp=share_link" target="_blank">Download CV</a>
                     <div class="d-flex flex-column align-items-center justify-content-center"><img src="{{asset('contents/website')}}/images/download.png" alt=""></div>
                 </div>
 			</div>
