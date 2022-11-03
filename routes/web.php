@@ -17,17 +17,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\BasicInfoController;
 
 use GuzzleHttp\Middleware;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', [WebsiteController::class, 'about'])->name('website.about');
 Route::get('/skill', [WebsiteController::class, 'skill'])->name('website.skill');
@@ -143,10 +133,14 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::post('update', [BasicInfoController::class, 'update'])->name('basic_info.update');
     });
 
+
 });
 
 
-
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return 'Application cache has been cleared';
+});
 
 
 require __DIR__.'/auth.php';
