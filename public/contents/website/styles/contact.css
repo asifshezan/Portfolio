@@ -401,7 +401,8 @@ section
 .about_button
 {
 	position: absolute;
-	left: 85px;
+	left: 5px;
+    top: -50px;
 	bottom: 200px;
 	height: 55px;
 	background: #8583e1;

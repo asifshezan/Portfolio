@@ -2019,7 +2019,7 @@ var Shape = function Shape(container, opts) {
             autoStyleContainer: true,
             alignToBottom: true,
             value: null,
-            className: 'progressbar-text'
+            className: 'progress-text'
         },
         svgStyle: {
             display: 'block',

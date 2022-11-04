@@ -112,7 +112,8 @@ p::selection
 h1{font-size: 48px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
-h4{font-size: 18px;}
+h4{font-size: 18px;
+    color: #838293;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
@@ -582,20 +583,21 @@ section
 	width: 25%;
 	height: 265px;
 	float: left;
-	padding-bottom: 70px;
+	padding-bottom: 350px;
 }
 .loader
 {
 	width: 195px;
 	height: 195px;
-	margin: 0 auto;
+	margin: 65px auto;
 	background: transparent;
 }
 .loader_content
 {
 	position: absolute;
 	left: 50%;
-	bottom: 0;
+	bottom: 100px;
+    top: 275px;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
@@ -621,6 +623,11 @@ section
 	font-weight: 500;
 	color: #7a798c;
 	margin-top: 12px;
+}
+
+.progress-text{
+    margin-top: 50px;
+    color: #000;
 }
 
 /*********************************
