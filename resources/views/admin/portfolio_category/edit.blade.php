@@ -50,6 +50,7 @@
                         @php
                             $galleris = App\Models\Gallery::where('status',1)->where('portfolio_id',$data->port_cate_id )->get();
                         @endphp
+
                     @foreach ($galleris as $gallery)
                     <div class="col-md-2">
                         <a href="{{ route('portfolio.single.image.remove',$gallery->gallery_id) }}" class="btn btn-sm btn-danger">X</a>

@@ -28,7 +28,7 @@
                         @foreach ($alldata as $data)
                             <!-- Portfolio Item -->
 						<div class="grid-item portfolio_item xyz_{{ $data->port_cate_id}}">
-							<img src="" alt="">
+							<img src="{{asset('uploads/portfolio_category/'.$data->image)}}" alt="">
 							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
 								<div class="portfolio_item_title">Design</div>
 								<div class="portfolio_item_link"><a href="#">See More</a></div>

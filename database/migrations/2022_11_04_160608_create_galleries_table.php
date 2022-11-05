@@ -17,8 +17,6 @@ class CreateGalleriesTable extends Migration
             $table->bigIncrements('gallery_id');
             $table->integer('portfolio_id');
             $table->string('image');
-            $table->integer('order_by')->nullable();
-            $table->string('remarks')->nullable();
             $table->integer('status')->default(1);
             $table->timestamps();
         });
