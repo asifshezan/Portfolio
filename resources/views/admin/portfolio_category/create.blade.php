@@ -39,7 +39,7 @@
 
                             <div class="col-md-6 my-2">
                                 <label for="port_cate_image">Education Image</label>
-                                <input class="form-control" type="file" name="port_cate_image" value="{{ old('port_cate_image') }}">
+                                <input class="form-control" type="file" name="port_cate_image[]" multiple value="{{ old('port_cate_image') }}">
                                 @error('port_cate_image')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror

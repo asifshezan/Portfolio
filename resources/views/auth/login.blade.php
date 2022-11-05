@@ -136,20 +136,10 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-
-                                                    <div class="mt-5 text-center">
-                                                        <p class="text-muted mb-0">Don't have an account ? <a href="auth-register.html"
-                                                                class="text-primary fw-semibold"> Signup now </a> </p>
-                                                    </div>
-
                                                 <div class="mt-4 mt-md-5 text-center">
-                                                    <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Minia   . Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                                                    <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Asif Shezan
                                                 </div>
-
-
-
                                         <!-- end review carousel -->
-
                                 </div>
                             </div>
                         </div>
@@ -160,8 +150,6 @@
             </div>
             <!-- end container fluid -->
         </div>
-
-
         <!-- JAVASCRIPT -->
         <script src="{{asset('contents/admin')}}/libs/jquery/jquery.min.js"></script>
         <script src="{{asset('contents/admin')}}/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -173,9 +161,5 @@
         <script src="{{asset('contents/admin')}}/libs/pace-js/pace.min.js"></script>
         <!-- password addon init -->
         <script src="{{asset('contents/admin')}}/js/pages/pass-addon.init.js"></script>
-
     </body>
-
-
-<!-- Mirrored from themesbrand.com/minia/layouts/auth-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Jan 2022 09:08:35 GMT -->
 </html>

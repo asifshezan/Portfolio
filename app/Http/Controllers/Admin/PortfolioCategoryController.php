@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Models\Portfolio_Category;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -28,12 +30,11 @@ class PortfolioCategoryController extends Controller
     }
 
     public function store(Request $request){
+        // dd($request->all());
         $this->validate($request,[
             'port_cate_title' => ['required'],
-            'port_cate_image' => ['required']
         ],[
             'port_cate_title.required' => 'Please enter title',
-            'port_cate_image.required' => 'Please select a image',
         ]);
 
         $slug = Str::slug($request['port_cate_title']);
@@ -45,13 +46,15 @@ class PortfolioCategoryController extends Controller
         ]);
 
         if($request->hasFile('port_cate_image')){
-            $image = $request->file('port_cate_image');
-            $imageName = $insert . time() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(300,300)->save('uploads/portfolio_category/' . $imageName);
+        foreach($request->port_cate_image as $portfolioImage){
+            $imageName =  uniqid() . '.' . $portfolioImage->getClientOriginalExtension();
+            Image::make($portfolioImage)->resize(300,300)->save('uploads/portfolio_category/' . $imageName);
 
-            Portfolio_Category::where('port_cate_id', $insert)->update([
-                'port_cate_image' => $imageName,
+            Gallery::create([
+                'portfolio_id' => $insert,
+                'image' => $imageName,
             ]);
+        }
         }
 
         if($insert){
@@ -89,19 +92,20 @@ class PortfolioCategoryController extends Controller
         ]);
 
         if($request->hasFile('port_cate_image')){
-            $image = $request->file('port_cate_image');
-            $imageName = $id . time() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(300,300)->save('uploads/portfolio_category/' . $imageName);
+            foreach($request->port_cate_image as $portfolioImage){
+                $imageName =  uniqid() . '.' . $portfolioImage->getClientOriginalExtension();
+                Image::make($portfolioImage)->resize(300,300)->save('uploads/portfolio_category/' . $imageName);
 
-            Portfolio_Category::where('port_cate_id',$id)->update([
-                'port_cate_image' => $imageName,
-                'updated_at' => Carbon::now()->toDateTimeString()
-            ]);
-        }
+                Gallery::where('portfolio_id', $id)->create([
+                    'portfolio_id' => $id,
+                    'image' => $imageName,
+                ]);
+            }
+            }
 
         if($update){
             Session::flash('success', 'Successfully update');
-            return redirect()->route('portfolio_category.index');
+            return redirect()->back();
         }else{
             Session::flash('error', 'update Failed.');
             return redirect()->back();
@@ -120,5 +124,21 @@ class PortfolioCategoryController extends Controller
             Session::flash('error', 'softdelete Failed.');
             return redirect()->back();
         }
+    }
+
+    public function imageRemove($gallery_id){
+        $gallery = Gallery::where('gallery_id', $gallery_id)->first();
+
+        // $gallery->delete();
+
+        // Banner Images Delete
+        if (File::exists('uploads/portfolio_category/' . $gallery->image)) {
+            File::delete('uploads/portfolio_category/' .$gallery->image);
+        }
+
+        Gallery::where('gallery_id', $gallery_id)->delete();
+
+        Session::flash('success', 'Successfully delete gallery image');
+            return redirect()->back();
     }
 }

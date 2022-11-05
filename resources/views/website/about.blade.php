@@ -44,7 +44,7 @@
 							<div class="loader_container">
 								<div class="loader" data-perc="0.80"></div>
 								<div class="loader_content text-center">
-									<div class="loader_title">pure luck</div>
+									<div class="loader_title">sincerity</div>
 									{{-- <div class="loader_subtitle">Vestibulum est mattis effic.</div> --}}
 								</div>
 							</div>

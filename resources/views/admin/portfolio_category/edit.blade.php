@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('content')
+{{-- @dd($data->galleris) --}}
 <!-- start page title -->
 <div class="row">
     <div class="col-12">
@@ -31,29 +32,33 @@
                         @csrf
                         @method('PUT')
                         <div class="row form-group">
-
-                        <div class="col-md-6 my-2">
+                            <div class="col-md-12 my-2">
+                                <label for="port_cate_title">Portfolio Category Title</label>
+                                <input type="hidden" name="port_cate_id" value="{{ $data->port_cate_id }}">
+                                <input class="form-control" type="text" name="port_cate_title" value="{{ $data->port_cate_title }}">
+                                @error('port_cate_title')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        <div class="col-md-12 my-2 pb-4">
                             <label for="port_cate_image">Portfolio Category Image</label>
-                            <input id="port_cate_image_input" class="form-control" type="file" name="port_cate_image" value="{{ $data->port_cate_image }}">
+                            <input id="port_cate_image_input" class="form-control" type="file" name="port_cate_image[]" multiple value="{{ $data->port_cate_image }}">
                             @error('port_cate_image')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-                        <div class="col-md-6 my-2">
-                            <label for="port_cate_title">Portfolio Category Title</label>
-                            <input type="hidden" name="port_cate_id" value="{{ $data->port_cate_id }}">
-                            <input class="form-control" type="text" name="port_cate_title" value="{{ $data->port_cate_title }}">
-                            @error('port_cate_title')
-                                <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div class="col-md-6">
-                            @if ($data['port_cate_image'])
-                            <img id="port_cate_image_preview" style="width: 150px" class="m-auto" src="{{ asset('uploads/portfolio_category/'.$data->port_cate_image) }}" alt="Image">
-                            @else
-                            <img id="port_cate_image_preview" style="width: 100px" class="m-auto" src="{{ asset('uploads/download.png') }}" alt="Image">
-                            @endif
-                        </div>
+                        @php
+                            $galleris = App\Models\Gallery::where('status',1)->where('portfolio_id',$data->port_cate_id )->get();
+                        @endphp
+                    @foreach ($galleris as $gallery)
+                    <div class="col-md-2">
+                        <a href="{{ route('portfolio.single.image.remove',$gallery->gallery_id) }}" class="btn btn-sm btn-danger">X</a>
+                        <img id="education_image_preview" style="width: 150px" class="m-auto" src="{{ asset('uploads/portfolio_category/'.$gallery->image) }}" alt="education Image">
+
+                        {{-- <img id="port_cate_image_preview" style="width: 100px" class="m-auto" src="{{ asset('uploads/download.png') }}" alt="Image"> --}}
+
+                    </div>
+                    @endforeach
                         <div class="col-md-7 mt-4">
                             <button type="submit" class="btn btn-primary waves-effect waves-light">
                                 <i class="bx bxs-save font-size-16 align-middle me-2"></i> Portfolio Category Updata

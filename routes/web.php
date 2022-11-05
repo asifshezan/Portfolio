@@ -106,6 +106,8 @@ Route::group(['prefix' => 'dashboard', 'middleware'=> 'auth'], function(){
         Route::get('/view/{slug}', [PortfolioCategoryController::class, 'view'])->name('portfolio_category.view');
         Route::put('/update', [PortfolioCategoryController::class, 'update'])->name('portfolio_category.update');
         Route::get('/softdelete/{slug}', [PortfolioCategoryController::class, 'softdelete'])->name('portfolio_category.softdelete');
+        Route::get('/single/image/{gallery_id}', [PortfolioCategoryController::class, 'imageRemove'])->name('portfolio.single.image.remove');
+
     });
 
     Route::group(['prefix' => 'skills', 'middleware' => 'auth'], function(){
