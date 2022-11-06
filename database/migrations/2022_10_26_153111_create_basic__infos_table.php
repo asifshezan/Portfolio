@@ -24,7 +24,7 @@ class CreateBasicInfosTable extends Migration
             $table->string('info_facebook')->nullable();
             $table->string('info_instagram')->nullable();
             $table->string('info_linkedin')->nullable();
-            $table->string('info_google')->nullable();
+            $table->string('info_github')->nullable();
             $table->string('info_image',50)->nullable();
             $table->integer('info_status')->default(1);
             $table->timestamps();

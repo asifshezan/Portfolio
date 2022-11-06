@@ -32,7 +32,7 @@ class BasicInfoController extends Controller
             'info_facebook' => $request['info_facebook'],
             'info_instagram' => $request['info_instagram'],
             'info_linkedin' => $request['info_linkedin'],
-            'info_google' => $request['info_google'],
+            'info_github' => $request['info_github'],
             'info_status' => 1,
             'updated_at' => Carbon::now()->toDateTimeString(),
         ]);

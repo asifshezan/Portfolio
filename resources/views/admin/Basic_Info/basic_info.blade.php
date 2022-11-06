@@ -93,12 +93,12 @@
                             @endif
                         </div>
                     </div>
-                    <div class="row mb-3 {{$errors->has('info_google') ? ' has-error':''}}">
-                        <label class="col-sm-3 col-form-label col_form_label">Google:</label>
+                    <div class="row mb-3 {{$errors->has('info_github') ? ' has-error':''}}">
+                        <label class="col-sm-3 col-form-label col_form_label">Github:</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control form_control" name="info_google" value="{{ $basic_all->info_google }}">
-                            @if ($errors->has('info_google'))
-                            <span class="error">{{ $errors->first('info_google') }}</span>
+                            <input type="text" class="form-control form_control" name="info_github" value="{{ $basic_all->info_github }}">
+                            @if ($errors->has('info_github'))
+                            <span class="error">{{ $errors->first('info_github') }}</span>
                             @endif
                         </div>
                     </div>
