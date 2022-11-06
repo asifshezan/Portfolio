@@ -17,6 +17,9 @@
 					<ul>
 						<li class="portfolio_category active is-checked" data-filter="*">All</li>
                         @foreach ($alldata as $data )
+                        @php
+                            $images = App\Models\Gallery::where('portfolio_id', $data->port_cate_id )->get();
+                        @endphp
                         <li class="portfolio_category" data-filter=".xyz_{{ $data->port_cate_id}}">{{ $data->port_cate_title }}</li>
                         @endforeach
 					</ul>
@@ -25,16 +28,17 @@
 				<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
 					<div class="portfolio_grid grid clearfix">
 
-                        @foreach ($alldata as $data)
                             <!-- Portfolio Item -->
-						<div class="grid-item portfolio_item xyz_{{ $data->port_cate_id}}">
-							<img src="{{asset('uploads/portfolio_category/'.$data->image)}}" alt="">
+						@foreach ($images as $image)
+                        <div class="grid-item portfolio_item xyz_{{ $image->portfolio_id}}">
+							<img src="{{asset('uploads/portfolio_category/'.$image->image)}}" alt="">
 							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
 								<div class="portfolio_item_title">Design</div>
 								<div class="portfolio_item_link"><a href="#">See More</a></div>
 							</div>
 						</div>
                         @endforeach
+
 					</div>
 				</div>
 			</div>
