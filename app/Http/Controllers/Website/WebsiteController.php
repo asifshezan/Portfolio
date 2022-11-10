@@ -66,8 +66,8 @@ class WebsiteController extends Controller
             'created_at' => Carbon::now()->toDateTimeString()
         ]);
 
-        Mail::to($request->cm_email)->send(new contact_message($request->cm_message));
-        Mail::to('asifshezan7@gamil.com')->send(new contact_message($request->cm_message));
+        // Mail::to($request->cm_email)->send(new contact_message($request->cm_message));
+        // Mail::to('asifshezan7@gamil.com')->send(new contact_message($request->cm_message));
 
         if($insert){
             Session::flash('success', 'Successfully insert');

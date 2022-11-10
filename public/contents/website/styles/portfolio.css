@@ -699,9 +699,9 @@ section
 }
 .portfolio_item
 {
-	width: calc((100% - 279px) / 3);
+	width: calc((100% - 279px) / 4);
 	float: left;
-	margin-bottom: 89px;
+	margin-bottom: 80px;
 	margin-right: 93px;
 	background: #100f3a;
 }

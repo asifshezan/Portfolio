@@ -32,7 +32,7 @@
                             <img src="{{ asset('uploads/portfolio_category').'/'.$data->image }}" alt="">
                             <div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
                                 <div class="portfolio_item_title">{{ $category->port_cate_title }}</div>
-                                <div class="portfolio_item_link"><a href="#">See More</a></div>
+                                <div class="portfolio_item_link"><a href="{{ asset('uploads/portfolio_category/'.$data->image)}}">See More</a></div>
                             </div>
                         </div>
                         @endforeach

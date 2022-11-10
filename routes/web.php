@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\BasicInfoController;
 
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [WebsiteController::class, 'about'])->name('website.about');
 Route::get('/skill', [WebsiteController::class, 'skill'])->name('website.skill');
@@ -144,5 +145,6 @@ Route::get('/clear-cache', function() {
     return 'Application cache has been cleared';
 });
 
+// Auth::routes(['register' => false]);
 
 require __DIR__.'/auth.php';

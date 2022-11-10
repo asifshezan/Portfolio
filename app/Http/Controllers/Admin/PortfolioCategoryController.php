@@ -48,7 +48,7 @@ class PortfolioCategoryController extends Controller
         if($request->hasFile('port_cate_image')){
         foreach($request->port_cate_image as $portfolioImage){
             $imageName =  uniqid() . '.' . $portfolioImage->getClientOriginalExtension();
-            Image::make($portfolioImage)->resize(300,300)->save('uploads/portfolio_category/' . $imageName);
+            Image::make($portfolioImage)->save('uploads/portfolio_category/' . $imageName);
 
             Gallery::create([
                 'portfolio_id' => $insert,
@@ -94,7 +94,7 @@ class PortfolioCategoryController extends Controller
         if($request->hasFile('port_cate_image')){
             foreach($request->port_cate_image as $portfolioImage){
                 $imageName =  uniqid() . '.' . $portfolioImage->getClientOriginalExtension();
-                Image::make($portfolioImage)->resize(300,300)->save('uploads/portfolio_category/' . $imageName);
+                Image::make($portfolioImage)->save('uploads/portfolio_category/' . $imageName);
 
                 Gallery::where('portfolio_id', $id)->create([
                     'portfolio_id' => $id,
