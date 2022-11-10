@@ -70,7 +70,7 @@ class WebsiteController extends Controller
         // Mail::to('asifshezan7@gamil.com')->send(new contact_message($request->cm_message));
 
         if($insert){
-            Session::flash('success', 'Successfully insert');
+            Session::flash('success', 'Message Successfully Send.');
             return redirect()->back();
         }else{
             Session::flash('error','opps! failed');

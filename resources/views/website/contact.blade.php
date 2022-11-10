@@ -1,11 +1,13 @@
 @extends('layouts.website')
 @section('content')
 	<!-- Main Content -->
-
+@php
+    $contacts = App\Models\Contact::where('cont_status',1)->first();
+@endphp
     <div class="main_content">
         <div class="main_title_container d-flex flex-column align-items-start justify-content-end">
-            <div class="main_subtitle">What clients say</div>
-            <div class="main_title">Contact me</div>
+            <div class="main_subtitle">{{ $contacts->cont_subtitle }}</div>
+            <div class="main_title">{{ $contacts->cont_title }}</div>
         </div>
         <div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
 
@@ -18,12 +20,19 @@
                         <!-- Contact Form -->
                         <div class="col-xl-6">
                             <div class="contact_text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien porttitor, dignissim quam sit ame. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien.</p>
+                                <p>{{ $contacts->cont_details }}</p>
                             </div>
                             <div class="contact_form_container">
                                 <form action="{{ url('contact-message') }}" method="POST" id="contact_form" class="contact_form clearfix">
                                     @csrf
-                                    @if (Session::has('success'))
+                                    <div><input type="text" class="contact_input" placeholder="Name" name="cm_name" required="required"></div>
+                                    <div><input type="email" class="contact_input" placeholder="E-mail" name="cm_email" required="required"></div>
+                                    <div><input type="text" class="contact_input" placeholder="Subject" name="cm_subject" required="required"></div>
+                                    <div><input type="text" class="contact_input" name="cm_phone" placeholder="Phone" required="required"></div>
+                                    <textarea class="contact_input contact_textarea" placeholder="Message" name="cm_message" required="required"></textarea>
+                                    <button class="contact_button">{{ $contacts->cont_button }}</button>
+                                </form>
+                                @if (Session::has('success'))
                                     <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
                                         <strong>{{ Session::get('success') }}</strong>
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -31,16 +40,8 @@
                                         </button>
                                     </div>
                                     @endif
-                                    <div><input type="text" class="contact_input" placeholder="Name" name="cm_name" required="required"></div>
-                                    <div><input type="email" class="contact_input" placeholder="E-mail" name="cm_email" required="required"></div>
-                                    <div><input type="text" class="contact_input" placeholder="Subject" name="cm_subject" required="required"></div>
-                                    <div><input type="text" class="contact_input" name="cm_phone" placeholder="Phone" required="required"></div>
-                                    <textarea class="contact_input contact_textarea" placeholder="Message" name="cm_message" required="required"></textarea>
-                                    <button class="contact_button">Send Message</button>
-                                </form>
                             </div>
                         </div>
-
                         <!-- Contact Map -->
                         <div class="col-xl-6">
                             <div>
@@ -50,11 +51,9 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     @endsection
