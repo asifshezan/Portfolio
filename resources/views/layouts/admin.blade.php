@@ -1,10 +1,6 @@
 <!doctype html>
 <html lang="en">
-
-
-<!-- Mirrored from themesbrand.com/minia/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Jan 2022 09:08:26 GMT -->
 <head>
-
         <meta charset="utf-8" />
         <title>Dashboard | Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +8,10 @@
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('contents/admin')}}/images/favicon.ico">
-
         <!-- plugin css -->
         <link href="{{asset('contents/admin')}}/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
-
         <!-- preloader css -->
         <link rel="stylesheet" href="{{asset('contents/admin')}}/css/preloader.min.css" type="text/css" />
-
         <!-- Bootstrap Css -->
         <link href="{{asset('contents/admin')}}/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
@@ -47,20 +40,10 @@
                                     <img src="{{asset('contents/admin')}}/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Minia</span>
                                 </span>
                             </a>
-                            <a href="index.html" class="logo logo-light">
-                                <span class="logo-sm">
-                                    <img src="{{asset('contents/admin')}}/images/logo-sm.svg" alt="" height="24">
-                                </span>
-                                <span class="logo-lg">
-                                    <img src="{{asset('contents/admin')}}/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Minia</span>
-                                </span>
-                            </a>
                         </div>
-
                         <button type="button" class="btn btn-sm px-3 font-size-16 header-item" id="vertical-menu-btn">
                             <i class="fa fa-fw fa-bars"></i>
                         </button>
-
                         <!-- App Search-->
                         <form class="app-search d-none d-lg-block">
                             <div class="position-relative">
@@ -70,23 +53,7 @@
                         </form>
                     </div>
                     <div class="d-flex">
-                        <div class="dropdown d-inline-block d-lg-none ms-2">
-                            <button type="button" class="btn header-item" id="page-header-search-dropdown"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i data-feather="search" class="icon-lg"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                                aria-labelledby="page-header-search-dropdown">
-                                <form class="p-3">
-                                    <div class="form-group m-0">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search ..." aria-label="Search Result">
-                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

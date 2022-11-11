@@ -33,7 +33,7 @@
 	<header class="header">
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
 			<div class="logo">Asif<span>.</span>Portfolio</div>
-			<div class="main_nav d-flex flex-row align-items-end justify-content-start">
+			<div class="main_nav d-flex flex-row align-items-end justify-content-start navbar-header">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="{{ request()->routeIs('website.about') ? 'active' : '' }}"><a href="{{ route('website.about')}}">About</a></li>
 					<li class="{{ request()->routeIs('website.skill') ? 'active' : '' }}"><a href="{{ route('website.skill')}}">Skills</a></li>
