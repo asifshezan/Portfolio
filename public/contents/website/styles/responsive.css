@@ -21,12 +21,87 @@
 
 ******************************/
 
+
+
+@media only screen and (max-width: 4000px){
+    /* about button */
+
+.general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
+.about_buttonn
+{
+	position: absolute;
+	left: 5px;
+    top: -50px;
+	bottom: 200px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn_2
+{
+	display: none;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn:hover,
+.about_buttonn_2:hover
+{
+	background: #100f3a;
+}
+.about_buttonn a,
+.about_buttonn_2 a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 55px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-right: 82px;
+}
+.about_buttonn > div,
+.about_buttonn_2 > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background: #100f3a;
+	pointer-events: none;
+}
+
+/* end about button */
+
+}
+
 /************
 1. 1600px
 ************/
 
 @media only screen and (max-width: 1600px)
 {
+    .general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
 	.header_button
 	{
 		position: absolute;
@@ -39,6 +114,67 @@
 		width: 50%;
 		margin-bottom: 60px;
 	}
+
+    /* about button */
+
+.about_buttonn
+{
+	position: absolute;
+	left: 5px;
+    top: -50px;
+	bottom: 200px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn_2
+{
+	display: none;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn:hover,
+.about_buttonn_2:hover
+{
+	background: #100f3a;
+}
+.about_buttonn a,
+.about_buttonn_2 a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 55px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-right: 82px;
+}
+.about_buttonn > div,
+.about_buttonn_2 > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background: #100f3a;
+	pointer-events: none;
+}
+
+/* end about button */
+
 }
 
 /************
@@ -47,13 +183,14 @@
 
 @media only screen and (max-width: 1440px)
 {
+    .general_info_image
+    {
+        width: 473px;
+        height: 510px;
+    }
 	.general_info
 	{
 		width: 400px;
-	}
-	.general_info_image
-	{
-		height: 400px;
 	}
 	.general_info_content
 	{
@@ -67,6 +204,67 @@
 	{
 		font-size: 72px;
 	}
+
+    /* about button */
+
+.about_buttonn
+{
+	position: absolute;
+	left: 5px;
+    top: -50px;
+	bottom: 200px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn_2
+{
+	display: none;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn:hover,
+.about_buttonn_2:hover
+{
+	background: #100f3a;
+}
+.about_buttonn a,
+.about_buttonn_2 a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 55px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-right: 82px;
+}
+.about_buttonn > div,
+.about_buttonn_2 > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background: #100f3a;
+	pointer-events: none;
+}
+
+/* end about button */
+
 }
 
 /************
@@ -75,6 +273,70 @@
 
 @media only screen and (max-width: 1380px)
 {
+    /* about button */
+    .general_info_image
+    {
+        width: 473px;
+        height: 510px;
+    }
+.about_buttonn
+{
+	position: absolute;
+	left: 5px;
+    top: -50px;
+	bottom: 200px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn_2
+{
+	display: none;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn:hover,
+.about_buttonn_2:hover
+{
+	background: #100f3a;
+}
+.about_buttonn a,
+.about_buttonn_2 a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 55px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-right: 82px;
+}
+.about_buttonn > div,
+.about_buttonn_2 > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background: #100f3a;
+	pointer-events: none;
+}
+
+/* end about button */
+
 
 }
 
@@ -99,6 +361,71 @@
 		right: auto;
 		bottom: 10px;
 	}
+    .general_info_image
+    {
+        width: 473px;
+        height: 510px;
+    }
+    /* about button */
+
+.about_buttonn
+{
+	position: absolute;
+	left: 5px;
+    top: -50px;
+	bottom: 200px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn_2
+{
+	display: none;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn:hover,
+.about_buttonn_2:hover
+{
+	background: #100f3a;
+}
+.about_buttonn a,
+.about_buttonn_2 a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 55px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-right: 82px;
+}
+.about_buttonn > div,
+.about_buttonn_2 > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background: #100f3a;
+	pointer-events: none;
+}
+
+/* end about button */
+
 }
 
 /************
@@ -107,6 +434,11 @@
 
 @media only screen and (max-width: 1199px)
 {
+    .general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
 	.super_container
 	{
 		width: 100%;
@@ -123,7 +455,11 @@
 	.general_info_image
 	{
 		width: 473px;
-		height: 473px;
+		height: 503px;
+	}
+    .general_info_content
+	{
+		padding-bottom: 50px;
 	}
 	.main_content
 	{
@@ -137,6 +473,67 @@
 	{
 		font-size: 24px;
 	}
+
+    /* about button */
+
+.about_buttonn
+{
+	position: absolute;
+	left: 5px;
+    top: -50px;
+	bottom: 200px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn_2
+{
+	display: none;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn:hover,
+.about_buttonn_2:hover
+{
+	background: #100f3a;
+}
+.about_buttonn a,
+.about_buttonn_2 a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 55px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-right: 82px;
+}
+.about_buttonn > div,
+.about_buttonn_2 > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background: #100f3a;
+	pointer-events: none;
+}
+
+/* end about button */
+
 }
 
 /************
@@ -145,6 +542,73 @@
 
 @media only screen and (max-width: 1100px)
 {
+/* about button */
+.general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
+.general_info_content
+	{
+		padding-bottom: 20px;
+	}
+.about_buttonn
+{
+	position: absolute;
+	left: 5px;
+    top: -50px;
+	bottom: 200px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn_2
+{
+	display: none;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn:hover,
+.about_buttonn_2:hover
+{
+	background: #100f3a;
+}
+.about_buttonn a,
+.about_buttonn_2 a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 55px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-right: 82px;
+}
+.about_buttonn > div,
+.about_buttonn_2 > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background: #100f3a;
+	pointer-events: none;
+}
+
+/* end about button */
 
 }
 
@@ -154,6 +618,73 @@
 
 @media only screen and (max-width: 1024px)
 {
+/* about button */
+.general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
+.general_info_content
+	{
+		padding-bottom: 50px;
+	}
+.about_buttonn
+{
+	position: absolute;
+	left: 5px;
+    top: -50px;
+	bottom: 200px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn_2
+{
+	display: none;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	height: 55px;
+	background: #8583e1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_buttonn:hover,
+.about_buttonn_2:hover
+{
+	background: #100f3a;
+}
+.about_buttonn a,
+.about_buttonn_2 a
+{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 55px;
+	color: #FFFFFF;
+	padding-left: 22px;
+	padding-right: 82px;
+}
+.about_buttonn > div,
+.about_buttonn_2 > div
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 55px;
+	background: #100f3a;
+	pointer-events: none;
+}
+
+/* end about button */
 
 }
 
@@ -167,6 +698,11 @@
 	{
 		padding-left: 50px;
 	}
+    .general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
 }
 
 /************
@@ -179,6 +715,15 @@
 	{
 		width: 323px;
 	}
+    .general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
+.general_info_content
+	{
+		padding-bottom: 50px;
+	}
 }
 
 /************
@@ -187,7 +732,15 @@
 
 @media only screen and (max-width: 880px)
 {
-
+    .general_info_image
+    {
+        width: 473px;
+        height: 510px;
+    }
+    .general_info_content
+	{
+		padding-bottom: 50px;
+	}
 }
 
 /************
@@ -196,7 +749,15 @@
 
 @media only screen and (max-width: 768px)
 {
-
+    .general_info_image
+    {
+        width: 473px;
+        height: 510px;
+    }
+    .general_info_content
+	{
+		padding-bottom: 50px;
+	}
 }
 
 /************
@@ -205,6 +766,11 @@
 
 @media only screen and (max-width: 767px)
 {
+    .general_info_image
+    {
+    width: 473px;
+    height: 350px;
+    }
 	.logo
 	{
 		font-size: 28px;
@@ -216,7 +782,7 @@
 	}
 	.general_info_content
 	{
-		padding-bottom: 40px;
+		padding-bottom: 50px;
 	}
 	.main_content
 	{
@@ -314,6 +880,11 @@
 	{
 		font-size: 24px;
 	}
+    .general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
 }
 
 /************
@@ -322,6 +893,11 @@
 
 @media only screen and (max-width: 539px)
 {
+    .general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
 
 }
 
@@ -331,6 +907,11 @@
 
 @media only screen and (max-width: 480px)
 {
+    .general_info_image
+{
+    width: 473px;
+    height: 510px;
+}
 
 }
 

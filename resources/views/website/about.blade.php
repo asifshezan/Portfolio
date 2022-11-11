@@ -57,7 +57,7 @@
 									{{-- <div class="loader_subtitle">Vestibulum est mattis effic.</div> --}}
 								</div>
 							</div>
-                            <div class="about_button">
+                            <div class="about_buttonn">
                                 <a href="{{ asset('contents/website/Asif Ahamed CV.pdf')}}" target="_blank">Download CV</a>
                                 <div class="d-flex flex-column align-items-center justify-content-center"><img src="{{asset('contents/website')}}/images/download.png" alt=""></div>
                             </div>

@@ -11,18 +11,6 @@
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/responsive.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/skills_responsive.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/skills.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services_responsive.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/experience.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/experiences_responsive.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/education_responsive.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/education.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/portfolio_responsive.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/portfolio.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/contact_responsive.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/contact.css">
 </head>
 <body>
 
@@ -33,7 +21,7 @@
 	<header class="header">
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
 			<div class="logo">Asif<span>.</span>Portfolio</div>
-			<div class="main_nav d-flex flex-row align-items-end justify-content-start navbar-header">
+			<div class="main_nav d-flex flex-row align-items-end justify-content-start">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="{{ request()->routeIs('website.about') ? 'active' : '' }}"><a href="{{ route('website.about')}}">About</a></li>
 					<li class="{{ request()->routeIs('website.skill') ? 'active' : '' }}"><a href="{{ route('website.skill')}}">Skills</a></li>
@@ -49,7 +37,22 @@
 				</div>
 			</div>
 			<!-- Menu -->
-
+	<div class="menu">
+		<div class="menu_content d-flex flex-row align-items-start justify-content-end">
+			<div class="hamburger ml-auto">menu</div>
+			<div class="menu_nav text-right">
+				<ul>
+					<li class="{{ request()->routeIs('website.about') ? 'active' : '' }}"><a href="{{ route('website.about')}}">About</a></li>
+					<li class="{{ request()->routeIs('website.skill') ? 'active' : '' }}"><a href="{{ route('website.skill')}}">Skills</a></li>
+					<li class="{{ request()->routeIs('website.service') ? 'active' : '' }}"><a href="{{ route('website.service')}}">Services</a></li>
+					<li class="{{ request()->routeIs('website.experience') ? 'active' : '' }}"><a href="{{ route('website.experience')}}">Experience</a></li>
+					<li class="{{ request()->routeIs('website.education') ? 'active' : '' }}"><a href="{{ route('website.education')}}">Education</a></li>
+					<li class="{{ request()->routeIs('website.portfolio') ? 'active' : '' }}"><a href="{{ route('website.portfolio')}}">Portfolio</a></li>
+					<li class="{{ request()->routeIs('website.contact') ? 'active' : '' }}"><a href="{{ route('website.contact')}}">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 		</div>
 	</header>
 
@@ -62,7 +65,11 @@
 			<div class="general_info d-flex flex-xl-column flex-md-row flex-column">
 				<div>
 					<div class="general_info_image">
-						<div class="background_image" style="background-image:url({{asset('uploads/basics/'.$basic_all->info_image)}});"></div>
+							<div class="background_image" style="background-image:url({{asset('uploads/basics/'.$basic_all->info_image)}});"></div>
+						<div class="header_button_2">
+							<a href="https://www.fiverr.com/asifwebdev">Available for freelance work</a>
+					<div class="d-flex flex-column align-items-center justify-content-center"><img src="{{asset('contents/website')}}/images/download.png" alt=""></div>
+						</div>
 					</div>
 				</div>
 				<div class="general_info_content">
@@ -77,7 +84,6 @@
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center">
                                     <i class="fa fa-map-marker"></i>
                                 </div>
-
 								<div class="general_info_text">Location: <span>{{ $basic_all->info_location }}</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
@@ -97,7 +103,6 @@
 								<div class="general_info_text"><a href="https://asifwebdev.xyz">{{ $basic_all->info_website }}</a></div>
 							</li>
 						</ul>
-
 						<!-- Social -->
 						<div class="social_container">
 							<ul class="d-flex flex-row align-items-start justify-content-start">
@@ -111,18 +116,14 @@
 				</div>
 			</div>
 
+			<!-- Main Content -->
+
 			@yield('content')
-
-
 		</div>
-
-
 	</div>
-<div align='center'>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved from Asif Ahamed
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-
+    <div align='center'>
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved from Asif Ahamed</div>
+        </div>
 </div>
 
 <script src="{{asset('contents/website')}}/js/jquery-3.2.1.min.js"></script>
@@ -140,11 +141,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{{asset('contents/website')}}/plugins/Isotope/fitcolumns.js"></script>
 <script src="{{asset('contents/website')}}/plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="{{asset('contents/website')}}/js/custom.js"></script>
-<script src="{{asset('contents/website')}}/js/skills.js"></script>
-<script src="{{asset('contents/website')}}/js/experience.js"></script>
-<script src="{{asset('contents/website')}}/js/services.js"></script>
-<script src="{{asset('contents/website')}}/js/education.js"></script>
-<script src="{{asset('contents/website')}}/js/portfolio.js"></script>
-<script src="{{asset('contents/website')}}/js/contact.js"></script>
 </body>
 </html>
