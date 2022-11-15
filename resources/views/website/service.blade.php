@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>About</title>
+<title>Services</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="vCard template project">
@@ -11,10 +11,15 @@
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/services_responsive.css">
 </head>
 <body>
+
 <div class="super_container">
+
 	<!-- Header -->
+
 	<header class="header">
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
 			<div class="logo">Asif<span>.</span>Portfolio</div>
@@ -57,7 +62,7 @@
 		<div class="main_content_outer d-flex flex-xl-row flex-column align-items-start justify-content-start">
 
 			<!-- General Information -->
-            @php
+			@php
             $basic_all = App\Models\Basic_Info::where('info_status',1)->firstOrFail();
         	@endphp
 			<div class="general_info d-flex flex-xl-column flex-md-row flex-column">
@@ -99,6 +104,7 @@
 								<div class="general_info_text"><a href="https://asifwebdev.xyz" target="_blank">{{ $basic_all->info_website }}</a></div>
 							</li>
 						</ul>
+
 						<!-- Social -->
 						<div class="social_container">
 							<ul class="d-flex flex-row align-items-start justify-content-start">
@@ -111,81 +117,49 @@
 					</div>
 				</div>
 			</div>
-			<!-- Main Content -->
+
             @php
-            $about = App\Models\About::where('ab_status',1)->firstOrFail();
+            $allser = App\Models\Service::where('ser_status',1)->orderBy('ser_id','ASC')->get();
             @endphp
-			<div class="main_content">
-				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
-					<div class="main_subtitle">{{ $about->ab_subtitle }}</div>
-					<div class="main_title">{{ $about->ab_title }}</div>
-				</div>
-				<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
-					<div class="about_content">
-						<div class="about_title">Description</div>
-						<div class="col-md-11 about_text">
-							<h4> {{ $about->ab_details }} </h4>
-						</div>
-                        <!-- Loaders -->
-						<div class="loaders loaderr clearfix">
-							<!-- Loader -->
-							<div class="loader_container ">
-								<div class="loader" data-perc="0.75"></div>
-								<div class="loader_content text-center">
-									<div class="loader_title">intuition</div>
-									{{-- <div class="loader_subtitle">Etiam nec odio vestibulum est.</div> --}}
-								</div>
-							</div>
-							<!-- Loader -->
-							<div class="loader_container">
-								<div class="loader" data-perc="0.85"></div>
-								<div class="loader_content text-center">
-									<div class="loader_title">creativity</div>
-									{{-- <div class="loader_subtitle">Odio vestibulum est mattis.</div> --}}
-								</div>
-							</div>
-							<!-- Loader -->
-							<div class="loader_container">
-								<div class="loader" data-perc="0.80"></div>
-								<div class="loader_content text-center">
-									<div class="loader_title">sincerity</div>
-									{{-- <div class="loader_subtitle">Vestibulum est mattis effic.</div> --}}
-								</div>
-							</div>
-							<!-- Loader -->
-							<div class="loader_container">
-								<div class="loader" data-perc="0.95"></div>
-								<div class="loader_content text-center">
-									<div class="loader_title">awesomeness</div>
-									{{-- <div class="loader_subtitle">Vestibulum est mattis effic.</div> --}}
-								</div>
-							</div>
-                            <div class="about_buttonn">
-                                <a href="{{ asset('contents/website/Asif Ahamed CV.pdf')}}" target="_blank">Download CV</a>
-                                <div class="d-flex flex-column align-items-center justify-content-center"><img src="{{asset('contents/website')}}/images/download.png" alt=""></div>
+                    <!-- Main Content -->
+                    <div class="main_content">
+                        <div class="main_title_container d-flex flex-column align-items-start justify-content-end">
+                            <div class="main_subtitle">What I am good at</div>
+                            <div class="main_title">My Services</div>
+                        </div>
+                        <div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
+                            <!-- Services -->
+                            <div class="services">
+                                <div class="services_container d-flex flex-row flex-wrap align-items-start justify-content-start">
+                                    @foreach ($allser as $servic)
+                                    <!-- Service -->
+                                    <div class="service">
+                                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div><div class="service_icon"><img src="{{ asset('uploads/service/'.$servic->ser_image) }}" alt=""></div></div>
+                                            <div class="service_title">{{ $servic->ser_title }}</div>
+                                        </div>
+                                        <div class="service_text">
+                                            <p>{{ $servic->ser_text }}</p>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
                             </div>
-						</div>
-					</div>
-				</div>
-			</div>
+                        </div>
+                    </div>
 		</div>
+		<div align='center'>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> || All rights reserved by <i class="fa fa-heart-o" aria-hidden="true"></i><a href="https://www.facebook.com/asif.shezan" target="_blank">Asif Shezan</a>
+            </div>
 	</div>
-    <div align='center'>
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> || All rights reserved by <i class="fa fa-heart-o" aria-hidden="true"></i><a href="https://www.facebook.com/asif.shezan" target="_blank">Asif Shezan</a>
-        </div>
 </div>
+
 <script src="{{asset('contents/website')}}/js/jquery-3.2.1.min.js"></script>
 <script src="{{asset('contents/website')}}/styles/bootstrap-4.1.2/popper.js"></script>
 <script src="{{asset('contents/website')}}/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/greensock/TweenMax.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/greensock/TimelineMax.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/greensock/animation.gsap.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/progressbar/progressbar.js"></script>
 <script src="{{asset('contents/website')}}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
 <script src="{{asset('contents/website')}}/plugins/easing/easing.js"></script>
 <script src="{{asset('contents/website')}}/plugins/parallax-js-master/parallax.min.js"></script>
-<script src="{{asset('contents/website')}}/js/custom.js"></script>
+<script src="{{asset('contents/website')}}/js/services.js"></script>
 </body>
 </html>
