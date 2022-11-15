@@ -322,9 +322,15 @@ section
 {
 	background: #8583e1;
 }
+.main_nav ul li
+{
+	margin-right: 2px;
+    color: #eaeaf1;
+}
 .main_nav ul li:last-child
 {
-	margin-right: 1px;
+	margin-right: 0px;
+    color: #fdfdfd;
 }
 .main_nav ul li a
 {
