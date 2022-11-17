@@ -38,7 +38,7 @@
                             </div>
 
                             <div class="col-md-6 my-2">
-                                <label for="port_cate_image">Education Image</label>
+                                <label for="port_cate_image">Portfolio Category Image</label>
                                 <input class="form-control" type="file" name="port_cate_image[]" multiple value="{{ old('port_cate_image') }}">
                                 @error('port_cate_image')
                                     <span class="text-danger">{{ $message }}</span>
@@ -56,15 +56,5 @@
         </div>
     </div>
 </div>
-{{-- Custom Image Upload Preview --}}
-<script type="text/javascript">
-    // Category Image
-    $('#partner_image_input').change(function(){
-    let reader = new FileReader();
-    reader.onload = (e) => {
-        $('#partner_image_preview').attr('src', e.target.result);
-    }
-    reader.readAsDataURL(this.files[0]);
-    });
-</script>
+
 @endsection

@@ -42,7 +42,7 @@
                             </div>
                         <div class="col-md-12 my-2 pb-4">
                             <label for="port_cate_image">Portfolio Category Image</label>
-                            <input id="port_cate_image_input" class="form-control" type="file" name="port_cate_image[]" multiple value="{{ $data->port_cate_image }}">
+                            <input id="port_cate_image_input" class="form-control" type="file" name="port_cate_image[]" multiple>
                             @error('port_cate_image')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -55,9 +55,7 @@
                     <div class="col-md-2">
                         <a href="{{ route('portfolio.single.image.remove',$gallery->gallery_id) }}" class="btn btn-sm btn-danger">X</a>
                         <img id="education_image_preview" style="width: 150px" class="m-auto" src="{{ asset('uploads/portfolio_category/'.$gallery->image) }}" alt="education Image">
-
                         {{-- <img id="port_cate_image_preview" style="width: 100px" class="m-auto" src="{{ asset('uploads/download.png') }}" alt="Image"> --}}
-
                     </div>
                     @endforeach
                         <div class="col-md-7 mt-4">

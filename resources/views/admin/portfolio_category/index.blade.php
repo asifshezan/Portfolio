@@ -39,11 +39,14 @@
                             @foreach ($all as $data)
                             <tr>
                                 <td>
-                                    @if($data['port_cate_image'])
-                                    <img height="40" src="{{ asset('uploads/portfolio_category/'.$data->port_cate_image)}}" />
-                                    @else
-                                    <img height="40" src="{{ asset('uploads/download.png')}}">
-                                    @endif
+                                    @php
+                                    $galleris = App\Models\Gallery::where('status',1)->where('portfolio_id',$data->port_cate_id )->get();
+                                @endphp
+                                    @foreach ($galleris as $gallery)
+                                    <div>
+                                        <img id="education_image_preview" style="width: 50px; padding:3px;"  class="m-auto" src="{{ asset('uploads/portfolio_category/'.$gallery->image) }}" alt="education Image">
+                                    </div>
+                                    @endforeach
                                 </td>
                                 <td>{{ $data['port_cate_title'] }}</td>
                                 {{-- <td>{{ Str::limit( $data['edu_text'], 35)}}</td> --}}
