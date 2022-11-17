@@ -6,9 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="vCard template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="{{asset('contents/admin')}}/images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/bootstrap-4.1.2/bootstrap.min.css">
 <link href="{{asset('contents/website')}}/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/portfolio.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/portfolio_responsive.css">
 </head>

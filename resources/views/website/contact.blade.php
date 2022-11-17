@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Skills</title>
+<title>Contact</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="vCard template project">
@@ -12,16 +12,13 @@
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/responsive.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/skills.css">
-<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/skills_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/contact.css">
+<link rel="stylesheet" type="text/css" href="{{asset('contents/website')}}/styles/contact_responsive.css">
 </head>
 <body>
-
 <div class="super_container">
-
 	<!-- Header -->
-
-	<header class="header">
+    <header class="header">
 		<div class="header_content d-flex flex-row align-items-center justify-content-start">
 			<div class="logo">Asif<span>.</span>Portfolio</div>
 			<div class="main_nav d-flex flex-row align-items-end justify-content-start">
@@ -58,7 +55,6 @@
 	</div>
 		</div>
 	</header>
-
 	<div class="content_container">
 		<div class="main_content_outer d-flex flex-xl-row flex-column align-items-start justify-content-start">
 
@@ -105,7 +101,6 @@
 								<div class="general_info_text"><a href="https://asifwebdev.xyz" target="_blank">{{ $basic_all->info_website }}</a></div>
 							</li>
 						</ul>
-
 						<!-- Social -->
 						<div class="social_container">
 							<ul class="d-flex flex-row align-items-start justify-content-start">
@@ -118,148 +113,72 @@
 					</div>
 				</div>
 			</div>
-
-            <!-- Main Content -->
-            @php
-                $skill = App\Models\Skill::where('skill_status',1)->firstOrFail();
+			<!-- Main Content -->
+			@php
+            $contacts = App\Models\Contact::where('cont_status',1)->first();
             @endphp
-			<div class="main_content">
-				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
-                    <div class="main_subtitle">{{ $skill->skill_subtitle }}</div>
-                    <div class="main_title">{{ $skill->skill_title }}</div>
+        <div class="main_content">
+            <div class="main_title_container d-flex flex-column align-items-start justify-content-end">
+                <div class="main_subtitle">{{ $contacts->cont_subtitle }}</div>
+                <div class="main_title">{{ $contacts->cont_title }}</div>
+            </div>
+                <div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
+            <!-- Contact -->
+            <div class="contact">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Contact Form -->
+                        <div class="col-xl-6">
+                            <div class="contact_text">
+                                <p>{{ $contacts->cont_details }}</p>
+                            </div>
+                            <div class="contact_form_container">
+                                <form action="{{ url('contact-message') }}" method="POST" id="contact_form" class="contact_form clearfix">
+                                    @csrf
+                                    <div><input type="text" class="contact_input" placeholder="Name" name="cm_name" required="required"></div>
+                                    <div><input type="email" class="contact_input" placeholder="E-mail" name="cm_email" required="required"></div>
+                                    <div><input type="text" class="contact_input" placeholder="Subject" name="cm_subject" required="required"></div>
+                                    <div><input type="text" class="contact_input" name="cm_phone" placeholder="Phone" required="required"></div>
+                                    <textarea class="contact_input contact_textarea" placeholder="Message" name="cm_message" required="required"></textarea>
+                                    <button class="contact_button">{{ $contacts->cont_button }}</button>
+                                </form>
+                                @if (Session::has('success'))
+                                    <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+                                        <strong>{{ Session::get('success') }}</strong>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    @endif
+                            </div>
+                        </div>
+                        <!-- Contact Map -->
+                        <div class="col-xl-6">
+                            <div>
+                                <!-- Google Map -->
+                                <div>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.9972758009403!2d90.42172901538514!3d23.783111343441952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79705d8041d%3A0xe1bf95ab3b06a96f!2sUttar%20Badda%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1660319513454!5m2!1sen!2sbd" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-				<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
-
-					<!-- Skills Content -->
-					<div class="skills">
-						<div class="skills_text">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-xl-10 center">
-                                        <h4>{{ $skill->skill_details }}</h4>
-                                    </div>
-                                    <div class="col-xl-1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-						<!-- Progress Bars -->
-                        <div class="progress_bars">
-                            <div class="container-fluid">
-                                <div class="row">
-
-                                    <!-- Progress Bar -->
-                                    <div class="col-xl-4 col-lg-6 pb_col">
-                                        <div class="pb_item">
-                                            <div class="p_bar_title">HTML 5</div>
-                                            <div id="skill_1_pbar" class="skill_barss progressbar_text" data-perc="1" data-name="skill_1_pbar" data-color-start="#79ccff" data-color-end="#9b74ff"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Progress Bar -->
-                                    <div class="col-xl-4 col-lg-6 pb_col">
-                                        <div class="pb_item">
-                                            <div class="p_bar_title">CSS</div>
-                                            <div id="skill_2_pbar" class="skill_barss" data-perc="1" data-name="skill_2_pbar" data-color-start="#ff4646" data-color-end="#ff26d9"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Progress Bar -->
-                                    <div class="col-xl-4 col-lg-6 pb_col">
-                                        <div class="pb_item">
-                                            <div class="p_bar_title">Bootstrap 5</div>
-                                            <div id="skill_3_pbar" class="skill_barss" data-perc="0.98" data-name="skill_3_pbar" data-color-start="#0054ff" data-color-end="#ff23d3"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Progress Bar -->
-                                    <div class="col-xl-4 col-lg-6 pb_col">
-                                        <div class="pb_item">
-                                            <div class="p_bar_title">PHP</div>
-                                            <div id="skill_4_pbar" class="skill_barss" data-perc="0.65" data-name="skill_4_pbar" data-color-start="#79ff7c" data-color-end="#ffbd4a"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Progress Bar -->
-                                    <div class="col-xl-4 col-lg-6 pb_col">
-                                        <div class="pb_item">
-                                            <div class="p_bar_title">Laravel</div>
-                                            <div id="skill_5_pbar" class="skill_barss" data-perc="0.75" data-name="skill_5_pbar" data-color-start="#79ff8f" data-color-end="#7b74ff"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Progress Bar -->
-                                    <div class="col-xl-4 col-lg-6 pb_col">
-                                        <div class="pb_item">
-                                            <div class="p_bar_title">MySql</div>
-                                            <div id="skill_6_pbar" class="skill_barss" data-perc="0.70" data-name="skill_6_pbar" data-color-start="#ff2d72" data-color-end="#ffab79"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-						<!-- Milestones -->
-
-						<div class="milestones clearfix">
-
-                            <!-- Milestone -->
-                            <div class="milestone text-center">
-                                <div class="milestone_icon"><img src="{{asset('contents/website')}}/images/icon_6.png" alt=""></div>
-                                <div class="milestone_counter" data-end-value="03">0</div>
-                                <div class="milestone_text">Years of Experience</div>
-                            </div>
-
-                            <!-- Milestone -->
-                            <div class="milestone text-center">
-                                <div class="milestone_icon"><img src="{{asset('contents/website')}}/images/icon_7.png" alt=""></div>
-                                <div class="milestone_counter" data-end-value="3" data-sign-before="">0</div>
-                                <div class="milestone_text">Happy Clients</div>
-                            </div>
-
-                            <!-- Milestone -->
-                            <div class="milestone text-center">
-                                <div class="milestone_icon"><img src="{{asset('contents/website')}}/images/icon_8.png" alt=""></div>
-                                <div class="milestone_counter" data-end-value="684" data-sign-after="">0</div>
-                                <div class="milestone_text">Followers on FB</div>
-                            </div>
-
-                            <!-- Milestone -->
-                            <div class="milestone text-center">
-                                <div class="milestone_icon"><img src="{{asset('contents/website')}}/images/icon_9.png" alt=""></div>
-                                <div class="milestone_counter" data-end-value="5">0</div>
-                                <div class="milestone_text">Finished Projects</div>
-                            </div>
-
-                        </div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div align='center'>
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> || All rights reserved by <i class="fa fa-heart-o" aria-hidden="true"></i><a href="https://www.facebook.com/asif.shezan" target="_blank">Asif Shezan</a>
+            </div>
         </div>
+    </div>
+		</div>
+        <div align='center'>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> || All rights reserved by <i class="fa fa-heart-o" aria-hidden="true"></i><a href="https://www.facebook.com/asif.shezan" target="_blank">Asif Shezan</a>
+            </div>
 	</div>
 </div>
-
 <script src="{{asset('contents/website')}}/js/jquery-3.2.1.min.js"></script>
 <script src="{{asset('contents/website')}}/styles/bootstrap-4.1.2/popper.js"></script>
 <script src="{{asset('contents/website')}}/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/greensock/TweenMax.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/greensock/TimelineMax.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/greensock/animation.gsap.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="{{asset('contents/website')}}/plugins/progressbar/progressbar.js"></script>
 <script src="{{asset('contents/website')}}/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
 <script src="{{asset('contents/website')}}/plugins/easing/easing.js"></script>
 <script src="{{asset('contents/website')}}/plugins/parallax-js-master/parallax.min.js"></script>
-<script src="{{asset('contents/website')}}/js/skills.js"></script>
-<script src="{{asset('contents/website')}}/js/custom.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+<script src="{{asset('contents/website')}}/js/contact.js"></script>
 </body>
 </html>

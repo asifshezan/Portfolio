@@ -37,7 +37,7 @@
                                     <img src="{{asset('contents/admin')}}/images/logo-sm.svg" alt="" height="24">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{asset('contents/admin')}}/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Minia</span>
+                                    <img src="{{asset('contents/admin')}}/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Asif Portfolio</span>
                                 </span>
                             </a>
                         </div>
