@@ -80,7 +80,8 @@
 								<div class="general_info_text">Name: <span>{{ $basic_all->info_name }}</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
-								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{{asset('contents/website')}}/images/location.png" alt=""></div>
+								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><i class="fa fa-map-marker"></i></div>
+                                {{-- <img src="{{asset('contents/website')}}/images/location.png" alt=""> --}}
 								<div class="general_info_text">Location: <span>{{ $basic_all->info_location }}</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
