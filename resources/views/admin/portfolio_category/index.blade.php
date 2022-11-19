@@ -5,7 +5,6 @@
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
             <h4 class="mb-sm-0 font-size-18">Portfolio Category</h4>
-
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="javascript: void(0);">Portfolio Category</a></li>
@@ -43,9 +42,7 @@
                                     $galleris = App\Models\Gallery::where('status',1)->where('portfolio_id',$data->port_cate_id )->get();
                                 @endphp
                                     @foreach ($galleris as $gallery)
-                                    <div>
-                                        <img id="education_image_preview" style="width: 50px; padding:3px;"  class="m-auto" src="{{ asset('uploads/portfolio_category/'.$gallery->image) }}" alt="education Image">
-                                    </div>
+                                        <img style="width: 150px; padding:5px;" src="{{ asset('uploads/portfolio_category/'.$gallery->image) }}">
                                     @endforeach
                                 </td>
                                 <td>{{ $data['port_cate_title'] }}</td>

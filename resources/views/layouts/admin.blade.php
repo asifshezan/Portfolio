@@ -53,12 +53,13 @@
                         </form>
                     </div>
                     <div class="d-flex">
-
+                        @php
+                        $basic_all = App\Models\Basic_Info::where('info_status',1)->firstOrFail();
+                        @endphp
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="{{asset('contents/admin')}}/images/users/avatar-1.jpg"
-                                    alt="Header Avatar">
+                                {{-- <img class="rounded-circle header-profile-user" src="({{asset('uploads/basics/'. $basic_all->info_image)}})"> --}}
                                 <span class="d-none d-xl-inline-block ms-1 fw-medium">{{ auth()->user()->name }}</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
