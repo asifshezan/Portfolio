@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 // use App\Mail\Contact;
 // use App\Mail\contact_message;
 use App\Models\ContactMessage;
+use App\Models\Counter;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
@@ -20,7 +21,9 @@ class WebsiteController extends Controller
     }
 
     public function skill(){
-        return view('website.skill');
+        $views = Counter::latest()->paginate(5);
+        Counter::increment('views');
+        return view('website.skill', compact('views'));
     }
 
     public function service(){

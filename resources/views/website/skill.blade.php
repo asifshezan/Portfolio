@@ -231,9 +231,12 @@
 
                             <!-- Milestone -->
                             <div class="milestone text-center">
+                                @foreach ($views as $view)
                                 <div class="milestone_icon"><img src="{{asset('contents/website')}}/images/icon_8.png" alt=""></div>
-                                <div class="milestone_counter" data-end-value="684" data-sign-after="">0</div>
-                                <div class="milestone_text">Followers on FB</div>
+                                <div class="milestone_counter" data-end-value="{{ $view->views }}" data-sign-after="">0</div>
+                                <div class="milestone_text">Page on Viwes</div>
+                                @endforeach
+
                             </div>
 
                             <!-- Milestone -->
