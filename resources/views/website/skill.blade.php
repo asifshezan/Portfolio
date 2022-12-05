@@ -178,7 +178,7 @@
                                     <div class="col-xl-4 col-lg-6 pb_col">
                                         <div class="pb_item">
                                             <div class="p_bar_title">PHP</div>
-                                            <div id="skill_4_pbar" class="skill_barss" data-perc="0.65" data-name="skill_4_pbar" data-color-start="#79ff7c" data-color-end="#ffbd4a"></div>
+                                            <div id="skill_4_pbar" class="skill_barss" data-perc="0.75" data-name="skill_4_pbar" data-color-start="#79ff7c" data-color-end="#ffbd4a"></div>
                                         </div>
                                     </div>
 
@@ -195,6 +195,14 @@
                                         <div class="pb_item">
                                             <div class="p_bar_title">MySql</div>
                                             <div id="skill_6_pbar" class="skill_barss" data-perc="0.70" data-name="skill_6_pbar" data-color-start="#ff2d72" data-color-end="#ffab79"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Progress Bar -->
+                                    <div class="col-xl-4 col-lg-6 pb_col">
+                                        <div class="pb_item">
+                                            <div class="p_bar_title">Ajax</div>
+                                            <div id="skill_7_pbar" class="skill_barss" data-perc="0.70" data-name="skill_7_pbar" data-color-start="#ffad72" data-color-end="#ff3379"></div>
                                         </div>
                                     </div>
 
