@@ -17,13 +17,13 @@ use Illuminate\Support\Facades\Session;
 class WebsiteController extends Controller
 {
     public function about(){
-        return view('website.about');
+        $views = Counter::latest()->paginate(5);
+        Counter::increment('views');
+        return view('website.about', compact('views'));
     }
 
     public function skill(){
-        $views = Counter::latest()->paginate(5);
-        Counter::increment('views');
-        return view('website.skill', compact('views'));
+        return view('website.skill');
     }
 
     public function service(){
